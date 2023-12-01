@@ -2,16 +2,43 @@
 
 ---
 
-<form method="get">
-  <label for="name">Navn:</label>
-  <input type="text" id="name" name="name" required /><br />
+<h1>Indmelding</h1>
+<section>
+  <form method="get">
+    <label for="name">Navn:</label>
+    <input type="text" id="name" name="name" required /><br />
 
-  <label for="lastname">Efternavn:</label>
-  <input type="text" id="lastname" name="lastname" required /><br />
+    <label for="lastname">Efternavn:</label>
+    <input type="text" id="lastname" name="lastname" required /><br />
 
-  <label for="email">E-mail</label>
-  <input type="email" id="email" placeholder="din.mail@mail.dk" /><br />
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="din.mail@mail.dk" /><br />
 
-  <label for="phone">Telefon:</label>
-  <input type="tel" id="phone" name="phone" required /><br />
-</form>
+    <label for="phone">Telefon:</label>
+    <input type="tel" id="phone" name="phone" required /><br />
+
+    <label for="bday">Fødselsdag</label>
+    <input type="date" id="bday" /><br />
+    <label for="adress">Adresse</label>
+    <input type="text" id="adress" /><br />
+
+    <label for="terms">Jeg accepterer klubbens <a href="#">privatlivspolitik</a></label>
+    <input type="checkbox" id="terms" /><br />
+  </form>
+</section>
+
+<style>
+  h1 {
+    background-color: #2a3823;
+    color: white;
+    padding: 1rem 1rem;
+    margin: 0;
+  }
+  section {
+    border: 1px solid black;
+  }
+  input,
+  label {
+    display: block;
+  }
+</style>
