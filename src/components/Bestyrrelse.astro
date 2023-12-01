@@ -94,8 +94,19 @@ margin-bottom: 2rem;
 
 .grid {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin: 2rem;
+}
+
+@media (min-width: 599px) { 
+    .grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem;
+    margin: 2rem;
+}
+
 }
 
 
