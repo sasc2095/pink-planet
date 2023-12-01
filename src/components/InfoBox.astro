@@ -1,0 +1,71 @@
+---
+const {header} = Astro.props;
+
+---
+
+<section class="whole_box">
+
+<div class="box">
+    <h2>Hold</h2>
+</div>
+
+<div class="tekst">   
+    <p>
+        <b>Vi kører så vidt muligt i 3 hold.</b><br>
+       
+        <br><b>Hold 1</b>
+        <br>Kører søndag: 90-120 km</br>
+        Anslået gennemsnitshastighed: 30-35 km/t.  
+        <br>Tirsdag og torsdag: 60-75 km.<br>
+      
+        <br><b>Hold 2</b>
+        <br>Kører søndag: 75-100 km
+        <br>Anslået gennemsnitshastighed: 28-32 km/t. 
+        <br> Tirsdag og torsdag: 50-65 km.<br>
+       
+        <br><b>Hold 3</b>
+        <br> Kører søndag: 40-60 km 
+        <br>Anslået gennemsnitsfart: 20-25 km/t. 
+        <br>Tirsdag og torsdag: 30-50 km<br>
+       
+        <br><b>OBS.</b> Vintertræning udendørs foregår for de flestes vedkommende på Mountainbike og gravelcykler.
+        <br>De angivne tider kan naturligvis variere, afhængig af vind og vejr samt den aktuelle deltagersammensætning. 
+       <br>Det sker, at hold 1 og 2 kører sammen.</br>
+        <br></p>
+</div> 
+
+</section>
+
+<style>
+
+.box {
+padding: 10px;
+margin-top: 2rem;
+border-radius: 2px;
+background-color: #2A3823;
+}
+
+h2 {
+    color: white;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.tekst {
+border: 1px solid;
+color: black;
+margin-bottom: 5rem;
+}
+
+.tekst p {
+padding: 1.5rem;
+}
+
+.whole_box {
+    display: grid;
+    justify-content: center;
+}
+
+
+
+</style>
