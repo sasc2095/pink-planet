@@ -1,0 +1,17 @@
+---
+const { header } = Astro.props;
+const { price } = Astro.props;
+---
+
+<section>
+  <h2>{header}</h2>
+  <h3>{price}</h3>
+  <p class="small_text">Beløb dækker kalenderåret</p>
+  <button>Tilmeld</button>
+</section>
+
+<style>
+  section {
+    border: 1px solid black;
+  }
+</style>

@@ -21,9 +21,10 @@
     <input type="date" id="bday" /><br />
     <label for="adress">Adresse</label>
     <input type="text" id="adress" /><br />
-
-    <label for="terms">Jeg accepterer klubbens <a href="#">privatlivspolitik</a></label>
-    <input type="checkbox" id="terms" /><br />
+    <div class="checkbox">
+      <label for="terms">Jeg accepterer klubbens <a href="#">privatlivspolitik</a></label>
+      <input type="checkbox" id="terms" />
+    </div>
   </form>
 </section>
 
@@ -36,9 +37,38 @@
   }
   section {
     border: 1px solid black;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    position: relative;
   }
   input,
   label {
     display: block;
+    border-radius: 5px;
+  }
+
+  input {
+    padding: 0.5rem;
+    width: 100%;
+    border-style: solid;
+  }
+
+  input:hover {
+    border-color: #d38644;
+  }
+
+  .checkbox {
+    display: inline-block;
+  }
+
+  @media (min-width: 599px) {
+    input {
+      padding: 0.5rem;
+      width: 35rem;
+    }
   }
 </style>
