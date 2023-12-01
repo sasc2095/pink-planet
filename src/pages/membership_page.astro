@@ -1,0 +1,46 @@
+---
+import MainLayout from "../components/MainLayout.astro";
+import MembershipCard from "../components/MembershipCard.astro";
+---
+
+<MainLayout>
+  <h1 id="black_h1">Velkommen til Borup Cykel Motion</h1>
+  <img src="../../public/team_pic.webp" alt="holdbillede" />
+
+  <h1 class="h1_card">Nybegynder</h1>
+  <div class="container">
+    <MembershipCard header="Medlemmer 18+" price="Kr. 500" />
+    <MembershipCard header="Familie-pakke" price="Kr. 800" />
+  </div>
+
+  <p class="obs">
+    OBS. vi har ikke hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie pakke. Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
+  </p>
+
+  <h1 class="h1_card">Øvet</h1>
+  <div class="container">
+    <MembershipCard header="Medlemmer 18+" price="Kr. 500" />
+    <MembershipCard header="Familie hold" price="Kr. 500" />
+  </div>
+
+  <p class="obs">
+    OBS. vi har ikke hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie pakke. Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
+  </p>
+</MainLayout>
+
+<style>
+  h1 {
+    color: #2a3823;
+    text-align: center;
+  }
+  .h1_card {
+    background-color: #2a3823;
+    color: white;
+    padding: 1rem 1rem;
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>

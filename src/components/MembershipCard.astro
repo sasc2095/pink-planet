@@ -1,0 +1,30 @@
+---
+const { header } = Astro.props;
+const { price } = Astro.props;
+---
+
+<section>
+  <h2>{header}</h2>
+  <h3>{price}</h3>
+  <p class="small_text">Beløb dækker kalenderåret</p>
+  <button>Tilmeld</button>
+</section>
+
+<style>
+  section {
+    border: 1px solid black;
+    padding: 2rem 2rem;
+  }
+
+  button {
+    background-color: #d38644;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    $
+  }
+</style>
