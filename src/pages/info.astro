@@ -3,16 +3,93 @@ import MainLayout from "../components/MainLayout.astro";
 import InfoBox from "../components/InfoBox.astro";
 --- 
 
+<html lang="da">
+<body>
+    <MainLayout>
 
-<MainLayout>
+    <InfoBox>
+        <section class="whole_box">
+            <div class="box">
+                <h2>Hold</h2>
+            </div>
+            <div class="tekst">   
+                <p>
+                    <b>Vi kører så vidt muligt i 3 hold.</b><br>
+               
+                    <br><b>Hold 1</b>
+                    <br>Kører søndag: 90-120 km</br>
+                    Anslået gennemsnitshastighed: 30-35 km/t.  
+                    <br>Tirsdag og torsdag: 60-75 km.<br>
+              
+                    <br><b>Hold 2</b>
+                    <br>Kører søndag: 75-100 km
+                    <br>Anslået gennemsnitshastighed: 28-32 km/t. 
+                    <br> Tirsdag og torsdag: 50-65 km.<br>
+               
+                    <br><b>Hold 3</b>
+                    <br> Kører søndag: 40-60 km 
+                    <br>Anslået gennemsnitsfart: 20-25 km/t. 
+                    <br>Tirsdag og torsdag: 30-50 km<br>
+               
+                    <br><b>OBS.</b> Vintertræning udendørs foregår for de flestes vedkommende på Mountainbike og gravelcykler.
+                    <br>De angivne tider kan naturligvis variere, afhængig af vind og vejr samt den aktuelle deltagersammensætning. 
+                    <br>Det sker, at hold 1 og 2 kører sammen.</br>
+                    <br></p>
+            </div> 
+        </section>
+</InfoBox>
 
-<div class="container">
-    <InfoBox/>
-</div>
+<InfoBox>
+         <section class="whole_box">
 
-</MainLayout>
+             <div class="box">
+                  <h2>Praktisk information</h2>
+             </div>
+        
+             <div class="tekst">   
+                  <p><br>Interesserede er meget velkomne til at køre med et par gange, for lige at se hvad det hele er for noget. <br>
+                    <br>Det er vigtigt at cyklen er i orden med gode dæk, flaskestativ (husk drikkelse), pumpe, gear og <br> kæde som er funktionelle. 
+                    <br>Husk også at medbringe minimum 2 slanger til eventuelle punkteringer. <br> Er der ikke hurtigspænd på cyklen , husk også relevant værktøj.<br>
+                
+                    <br>At køre i flok er nogle gange en ny disciplin for nye medlemmer. 
+                    <br> Det er vigtigt at man er koncentreret, da vi ligger tæt på hinanden, for at få læ for vinden. 
+                    <br> Et umotiveret svaj med cyklen, kan betyde at en selv og andre styrter. Se gerne fanebladet "Køreregler"<br>
+                
+                    <br>Vi er også meget sociale i Borup Cykel Motion. 
+                    <br>Vi har adskillige arrangementer hen over sæsonen, hvor der er anledning til at mødes over en bid brød og <br> lidt at drikke, herunder ikke mindst den traditionsrige julefrokost, som hvert år holdes samtidig med frigivels-<br>en af Tuborgs Juleøl. 
+                    <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
+             </div> 
+        </section>
+</InfoBox>
 
+</MainLayout> 
+</body>
+</html>
 
 <style>
+h2 {
+    color: white;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.whole_box {
+    display: grid;
+    justify-content: center;
+    margin: 2rem;
+}
+.box {
+padding: 10px;
+margin-top: 2.5rem;
+border-radius: 2px;
+background-color: #2A3823;
+}
+
+.tekst {
+border: 1px solid;
+color: black;
+margin-bottom: 1.5rem;
+padding: 1.5rem;
+}
 
 </style>
