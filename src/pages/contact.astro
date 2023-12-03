@@ -5,10 +5,8 @@ import Bestyrrelse from "../components/Bestyrrelse.astro";
 <html lang="da">
 <body>
 <MainLayout>
-    
-    <div class="overskrift">
-       <Bestyrrelse header="Klubbens bestyrrelse" />
-    </div>
+
+<Bestyrrelse header="Klubbens bestyrrelse" />
 
 <article class="grid">
 <Bestyrrelse >
@@ -91,13 +89,9 @@ import Bestyrrelse from "../components/Bestyrrelse.astro";
 </html>
 
 <style>
-.overskrift {
-text-align: center;
-margin: 5rem;
-}
-
 img {
-    width: 100%;
+width: 100%;
+margin-top: -4rem;
 }
 
 .info {
@@ -118,7 +112,12 @@ margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem;
-    margin: 2rem;
 }
+
+img {
+width: 100%;
+margin-top: -2rem;
+}
+
 }
 </style>
