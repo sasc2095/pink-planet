@@ -7,9 +7,8 @@ import InfoBox from "../components/InfoBox.astro";
 <body>
     <MainLayout>
 
-    <InfoBox>
-        <article class="whole_box">     
-            
+<article class="grid">
+    <InfoBox>            
             <h2 class="header_box">Hold</h2>
             <div class="text_box">
             <p> 
@@ -36,17 +35,18 @@ import InfoBox from "../components/InfoBox.astro";
                 <br>
             </p>
         </div>
-        </article>
 </InfoBox>
 
-<InfoBox>    
-    <article class="whole_box">  
+<div class="img">
+    <img src="team_pic.webp" alt="">
+    </div>
+</article>
 
+<InfoBox>    
         <h2 class="header_box">Praktisk Information</h2>
    
         <div class="text_box">
-        <p>
-            <br>Interesserede er meget velkomne til at køre med et par gange, for lige at se hvad det hele er for noget. <br>
+        <p class="text_box2">Interesserede er meget velkomne til at køre med et par gange, for lige at se hvad det hele er for noget. <br>
             <br>Det er vigtigt at cyklen er i orden med gode dæk, flaskestativ (husk drikkelse), pumpe, gear og <br> kæde som er funktionelle. 
             <br>Husk også at medbringe minimum 2 slanger til eventuelle punkteringer. <br> Er der ikke hurtigspænd på cyklen , husk også relevant værktøj.<br>
                 
@@ -58,8 +58,8 @@ import InfoBox from "../components/InfoBox.astro";
             <br>Vi har adskillige arrangementer hen over sæsonen, hvor der er anledning til at mødes over en bid brød og <br> lidt at drikke, herunder ikke mindst den traditionsrige julefrokost, som hvert år holdes samtidig med frigivels-<br>en af Tuborgs Juleøl. 
             <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
         </div>
-    </article>
 </InfoBox>
+
 
 </MainLayout> 
 </body>
@@ -89,21 +89,27 @@ margin-top: -1rem;
 margin-bottom: 2.5rem;
 }
 
+img {
+display: none
+}
+
 @media (min-width: 599px) {
-        .whole_box {
+    .grid {
         display: grid;
-        justify-content: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .header_box {
+        grid-template-columns: 1fr 1fr;
         margin-top: 1rem;
+        margin-bottom: -2rem;
     }
 
-    .text_box {
-        margin-bottom: 0.5rem;
+    .text_box2 {
+    margin-bottom: 1.5rem;
     }
-    }
+
+img {
+display: grid;    
+width: 97.5%;
+margin-top: 2.5rem;
+}
+ }
 
 </style>
