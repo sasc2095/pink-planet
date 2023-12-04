@@ -1,3 +1,4 @@
+/* general styling */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -15,9 +16,18 @@ body {
    background-color:  #e6e6dd;
 }
 
+p{
+  font-family: 'Poppins', sans-serif;
+}
+
 img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 1rem;
 }
+
+
+
+
+

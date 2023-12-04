@@ -39,8 +39,16 @@ import MembershipCard from "../components/MembershipCard.astro";
     padding: 1rem 1rem;
     margin: 0;
   }
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+  .container,
+  .obs {
+    padding: 1rem 1rem;
+  }
+
+  @media (min-width: 599px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
