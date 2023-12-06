@@ -3,6 +3,9 @@ const { title } = Astro.props;
 import "../pages/css/style.css"
 import Header from "./Headermobil2.astro";  
 import Footer from "../components/Footer.astro";
+
+import "@fontsource-variable/sofia-sans";
+import "@fontsource/poppins";
 ---
 
 <html lang="en">
@@ -11,7 +14,9 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sofia+Sans+Semi+Condensed:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../pages/css/style.css" />
 
     <title>{title}</title>
