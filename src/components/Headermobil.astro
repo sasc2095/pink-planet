@@ -1,0 +1,67 @@
+<header>
+  <div class="container logo">
+    <img src="../../public/SVG/logo.svg" alt="Borup Cykel Motion logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/signup_membership">Medlemsskab sign up</a></li>
+      <li><a href="/membership_page">Medlemsskab</a></li>
+      <li><a href="/info">Information</a></li>
+      <li><a href="/contact">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  header {
+    min-height: 100%;
+    background-color: #ebd9a6;
+    color: #ece7e3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  }
+  nav {
+    margin: auto;
+    padding: auto;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li {
+    height: 50px;
+  }
+  nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  nav li:first-child {
+    margin-right: auto;
+  }
+
+  /* burger menu */
+
+  /********************************************* */
+  img {
+    margin: 5%;
+    width: 100%;
+    height: auto;
+  }
+</style>

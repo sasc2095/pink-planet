@@ -1,5 +1,7 @@
 ---
 const { title } = Astro.props;
+import "../pages/css/style.css"
+import Header from "./Headermobil2.astro";  
 import Footer from "../components/Footer.astro";
 ---
 
@@ -16,11 +18,7 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <header>
-      <!-- indsæt header her -->
-      <a href="/signup_membership">Medlemsskab sign up</a>
-      <a href="/membership_page">Medlemsskab</a>
-      <a href="/info">Information</a>
-      <a href="/contact">Kontakt</a>
+      <Header/>
     </header>
     <main>
       <slot />
