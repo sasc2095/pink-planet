@@ -20,7 +20,7 @@
     <div class="slider">4</div>
     <div class="slider">5</div>
 </div>
-<img class="button" src ="SVG/button_right.svg" alt="">
+<img class="button_right" src ="SVG/button_right.svg" alt="">
 </article>
 
 <style>
@@ -42,16 +42,19 @@
     z-index: 1;
 }
 
-.button {
-    margin: 1.5rem;
+.button_right {
+    margin-left: 2rem;
+    cursor: pointer;
 }
 
 .button_left {
     margin-right: 2rem;
+    cursor: pointer;
 }
 
 .images {
-width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .wrapper {
@@ -82,6 +85,102 @@ background-color: aliceblue;
 color: #222;
 }
 
-
-
 </style>
+
+
+
+<script defer>// defer tells the browser to wait until the page has finished parsing before exevuting the script
+    const carousel = document.querySelector(".wrapper"),
+    firstImg =  document.querySelectorAll("img")[1],
+    arrowIcons = document.querySelectorAll(".button_right, .button_left");
+
+    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+
+   
+    const showHideIcons = () =>{
+        //showing and hiding prev/next icon according to carousel scroll left value
+        let scrollWidth = carousel.scrollWidth - carousel.clientWidth;// scrollWidth returns the entire width including what is not viewablem clientWidth returns the viewable width of an element (get max scrikkabke width)
+       
+
+        if(carousel.scrollLeft == 0){
+            arrowIcons[0].style.display = "none";
+        }else{
+            arrowIcons[0].style.display = "block";
+        }
+        if(carousel.scrollLeft == scrollWidth){
+            arrowIcons[1].style.display = "none";
+        }else{
+            arrowIcons[1].style.display = "block";
+        }
+    }
+
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => { 
+            // if clicked icon is left, reduce with value form the carousel scroll left else add to it
+            let firstImgWidth = firstImg.clientWidth + 360; // getting first img widrth & adding 360 margin value // mobil 90 og web 360?
+            if(icon.id =="left"){
+                carousel.scrollLeft -= firstImgWidth;
+            } else{
+                carousel.scrollLeft += firstImgWidth;
+            }
+            setTimeout( () => showHideIcons(), 60); // calling showHideIcons after 60ms
+        })
+    });
+
+    const autoSlide = () =>{
+        //if there is no image left to scroll then return from here
+        if(carousel.scrollLeft == ( carousel.scrollWidth - carousel.clientWidth))return;
+
+        positionDiff = Math.abs(positionDiff); //making positionDiff value to positive
+        let firstImgWidth = firstImg.clientWidth + 360; // mobil 90 og web 360?
+        ///getting diffrence value that needs to add or reduce form asrousel left to take middel img cetner
+        let vallDifference = firstImgWidth - positionDiff;
+
+        if(positionDiff > firstImgWidth/ 3){
+             // if current scrollLeft is greater than prevScrollLeft then user is sliding to the right else sliding to the left
+             carousel.scrollLeft += vallDifference; //if user scrolling to the right
+        } else{
+            carousel.scrollLeft -= positionDiff; // if user is scrolling to the left
+        }
+
+        
+    }
+
+    // by default isDragStart false and it'll only true ifthe mouse btn is clicked
+    const dragStart = (e) => {
+        // updating global variables value on mouse down event
+        isDragStart = true;
+        prevPageX = e.pageX || e.touches[0].pageX;//e.pageX will run on desktop devices and on touch devices etouches[0].pageX run, these both gives x coordinate of the mouse pointer or touch
+        prevScrollLeft =  carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+        // scrolling imgs/carousel to left according to mouse pointer
+        if(!isDragStart) return;
+        e.preventDefault(); // preventing it's default behavior. Now , img won't be dragged
+        isDragging = true;
+        carousel.classList.add("dragging"); // adding dragging class to carousel on mousemove
+        positionDiff = (e.pageX ||  e.touches[0].pageX) -prevPageX;
+        carousel.scrollLeft = prevScrollLeft - positionDiff; // scrollLeft or return the number of pixel an element's content is scrolled horizontally
+        showHideIcons();
+    }
+
+    const dragStop = () => {
+        isDragStart = false; // make isDragStart to false once user released the mouse btn so, the img stop sliding until the mouse down btn is clicked again
+        carousel.classList.remove("dragging"); //removing this class on mouseup
+
+        if(!isDragStart) return; //now isDragging witil only true if user start dragging Otherwise it is false & autoSlide function won't call.
+        isDragging = false;
+        autoSlide();
+    }
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("touchstart", dragStart);
+
+    carousel.addEventListener("mousemove", dragging);
+    carousel.addEventListener("touchmove", dragging);
+
+    carousel.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("mouseleave", dragStop);
+    carousel.addEventListener("touchend", dragStop);
+</script>
