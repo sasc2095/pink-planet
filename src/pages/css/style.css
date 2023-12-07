@@ -11,6 +11,7 @@ main {
   margin: 0;
   box-sizing: border-box;
  
+ 
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
   /* fonts */
 
-p{ 
+p, h2, h3, h4, li{ 
   font-family: 'Poppins', sans-serif;
 }
 
