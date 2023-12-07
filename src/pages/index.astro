@@ -1,5 +1,5 @@
 ---
-import Graybox from "../components/Greybox.astro";
+import Graybox from "../components/Graybox.astro";
 import MainLayout from "../components/MainLayout.astro";
 import Whitebox from "../components/Whitebox.astro";
 ---
@@ -16,7 +16,7 @@ import Whitebox from "../components/Whitebox.astro";
       </Graybox>
       <Whitebox>
         <div class="indexgrid">
-        <img src="../../public/SVG/orangecykel.svg" alt="orange cykel">
+        <img src="../../public/orange-bike.webp" alt="orange cykel">
         <div class="køredage">
         <h2>Køredage</h2>
         <p>
@@ -31,7 +31,7 @@ import Whitebox from "../components/Whitebox.astro";
       <Graybox>
         <div class="indexgrid">
             <div class="imggrid">
-                <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
+                <img class="firstimg" src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
                 <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
                 <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
             </div>
@@ -52,8 +52,12 @@ import Whitebox from "../components/Whitebox.astro";
 </html>
 
 <style>
-  .vises{
+.firstimg{
+    grid-row: span 2;
+}
+.vises{
     display: flex;
+    justify-content: center;
   }
   video {
     width: 90%;
@@ -63,7 +67,7 @@ import Whitebox from "../components/Whitebox.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 1rem;
-    margin-bottom: -2rem;
+    margin-bottom: 2rem;
 }
 .køredage{
     margin: auto;
@@ -75,5 +79,6 @@ import Whitebox from "../components/Whitebox.astro";
         grid-template-columns: 1fr 1fr;
         margin-top: 1rem;
         margin-bottom: -2rem;
+        align-items: center;
     }
 </style>
