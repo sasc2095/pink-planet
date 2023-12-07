@@ -1,0 +1,45 @@
+---
+
+---
+<article class="body">
+<div class="wrapper">
+    <div class="slider">1</div>
+    <div class="slider">2</div>
+    <div class="slider">3</div>
+    <div class="slider">4</div>
+    <div class="slider">5</div>
+</div>
+</article>
+
+<style>
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.wrapper {
+display: flex;
+grid-gap: 1rem;
+max-width: 768px;
+width: 100%;
+overflow-x: auto;
+}
+
+.slider {
+min-width: calc(50% - .5rem);
+aspect-ratio: 1/1;
+background: #222;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 2rem;
+scroll-snap-align: start;
+}
+
+
+
+</style>
