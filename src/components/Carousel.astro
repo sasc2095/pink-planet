@@ -3,7 +3,14 @@
 ---
 <article class="body">
 <div class="wrapper">
-    <div class="slider">1</div>
+    <div class="slider">
+        <div class="img">
+<img src="SVG/orangecykel.svg" alt="">
+</div>
+<div class="text">
+<p>hej</p>
+</div>
+    </div>
     <div class="slider">2</div>
     <div class="slider">3</div>
     <div class="slider">4</div>
@@ -16,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    margin: 10rem;
     padding: 1rem;
 }
 
@@ -26,18 +33,28 @@ grid-gap: 1rem;
 max-width: 768px;
 width: 100%;
 overflow-x: auto;
+position: relative;
 }
 
 .slider {
 min-width: calc(50% - .5rem);
 aspect-ratio: 1/1;
-background: #222;
+/*background: #222;*/
+border: 2px solid #222;
 display: flex;
 justify-content: center;
 align-items: center;
 color: #fff;
 font-size: 2rem;
 scroll-snap-align: start;
+}
+
+.text {
+position: absolute;
+text-align: center;
+z-index: auto;
+background-color: aliceblue;
+color: #222;
 }
 
 
