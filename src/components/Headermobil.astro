@@ -1,71 +1,135 @@
 ---
-import LoginForm from "../components/LoginForm.astro";
+import LoginForm from "./LoginForm.astro";
 ---
 
 <header>
-  <div class="container logo">
-    <img src="../../public/SVG/logo.svg" alt="Borup Cykel Motion logo" />
+  <div class="login_link">
+    <img class="acc" src="../../public/SVG/account_circle.svg" alt="login icon" />
+   <LoginForm/>
+  
+</div>
   </div>
-  <nav>
-    <ul>
-      <li><a href="/signup_membership">Medlemsskab sign up</a></li>
-      <li><a href="/membership_page">Medlemsskab</a></li>
-      <li><a href="/info">Information</a></li>
-      <li><a href="/contact">Kontakt</a></li>
-    </ul>
-  </nav>
+
+  <div class="burger_nav">
+    <div class="nav_bar">
+      <a class="nav_link" href="/">Forside</a>
+      <a class="nav_link" href="/signup_membership">Medlemsskab sign up</a>
+      <a class="nav_link" href="/membership_page">Medlemsskab</a>
+      <a class="nav_link" href="/info">Information</a>
+      <a class="nav_link" href="/contact">Kontakt</a>
+    </div>
+  </div>
+  <a href="/" class="bcmLogo">
+    <img src="../../public/SVG/logo.svg" alt="Borup Cykel Motion logo" />
+  </a>
+  <section class="burgermenu">
+    <span class="line_1"></span>
+    <span class="line_2"></span>
+    <span class="line_3"></span>
+  </section>
 </header>
 
+<script>
+
+
+  /* Burgermenu */
+  const burgerMenu = document.querySelector(".burgermenu");
+  const navMenu = document.querySelector(".burger_nav");
+  const marginActive = document.querySelector("main");
+
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    marginActive.classList.toggle("active");
+  });
+
+  document.querySelector(".nav_link").addEventListener("click", remove);
+
+  function remove() {
+    burgerMenu.classList.remove("active");
+    navMenu.classList.remove("active");
+    marginActive.classList.remove("active");
+  }
+</script>
+
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  }
-
   header {
-    min-height: 100%;
     background-color: #ebd9a6;
-    color: #ece7e3;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
   }
-  nav {
+  .bcmLogo {
     margin: auto;
-    padding: auto;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  nav li {
-    height: 50px;
-  }
-  nav a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-  nav a:hover {
-    background-color: #f0f0f0;
-  }
-  nav li:first-child {
-    margin-right: auto;
-  }
-
-  /* burger menu */
-
-  /********************************************* */
-  img {
-    margin: 5%;
-    width: 100%;
+    width: 40%;
     height: auto;
+  }
+  .acc {
+    margin: auto;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  
+  
+  /************ burger menu ***********/
+
+  .burger_nav {
+    display: none;
+    top: 6rem;
+    right: 0;
+  }
+  
+  .burger_nav.active {
+    display: block;
+    position: absolute;
+    background-color: #c0a4a4;
+    z-index: 4;
+    width: 20rem;
+    height:100%;
+  }
+
+  .nav_bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav_link {
+    padding: 40px 40px 40px 65px;
+  }
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.5s ease-in-out;
+  }
+
+  .line_1 {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .line_2 {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .line_3 {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .burgermenu.active .line_2 {
+    opacity: 0;
+  }
+  .burgermenu.active .line_2:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burgermenu.active .line_1:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burgermenu.active .line_3:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 </style>
