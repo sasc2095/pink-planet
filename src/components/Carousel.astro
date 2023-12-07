@@ -1,21 +1,26 @@
 ---
 
 ---
-<article class="body">
+<article class="body"> 
+    <h1 class="news">Nyheder</h1>
+    <img class="button_left" src ="SVG/button_left.svg" alt="">
+
 <div class="wrapper">
+
     <div class="slider">
-        <div class="img">
-<img src="SVG/orangecykel.svg" alt="">
-</div>
-<div class="text">
-<p>hej</p>
-</div>
+        <img class="images" src="SVG/orangecykel.svg" alt="">
+        <p class="text">hej</p>
     </div>
-    <div class="slider">2</div>
+
+    <div class="slider">
+        <img class="images" src="forest.png" alt="">
+    </div>
+
     <div class="slider">3</div>
     <div class="slider">4</div>
     <div class="slider">5</div>
 </div>
+<img class="button" src ="SVG/button_right.svg" alt="">
 </article>
 
 <style>
@@ -25,11 +30,32 @@
     align-items: center;
     margin: 10rem;
     padding: 1rem;
+    background: #383838;
+}
+
+.news {
+    font-family: 'Sofia Sans Variable', sans-serif;
+    color: #ffff;
+    margin-bottom: 22.5rem;
+    margin-right: 54rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.button {
+    margin: 1.5rem;
+}
+
+.button_left {
+    margin-right: 2rem;
+}
+
+.images {
+width: 100%;
 }
 
 .wrapper {
 display: flex;
-grid-gap: 1rem;
 max-width: 768px;
 width: 100%;
 overflow-x: auto;
@@ -38,15 +64,14 @@ position: relative;
 
 .slider {
 min-width: calc(50% - .5rem);
-aspect-ratio: 1/1;
 /*background: #222;*/
-border: 2px solid #222;
 display: flex;
 justify-content: center;
 align-items: center;
 color: #fff;
 font-size: 2rem;
 scroll-snap-align: start;
+padding: 4.2rem;
 }
 
 .text {
