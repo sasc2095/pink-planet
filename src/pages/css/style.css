@@ -4,7 +4,14 @@ main {
   margin: 0 auto;
 }
 
-
+:root {
+  --primary-dgreen: #2A3823;
+  --primary-lgray: #F9F9F9;
+  --secondary-orange: #E36C30;
+  --secondary-black:#000000;
+  --secondary-dgray:#383838;
+  
+}
 
 * {
   padding: 0;

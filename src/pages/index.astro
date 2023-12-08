@@ -3,7 +3,6 @@ import Graybox from "../components/Graybox.astro";
 import MainLayout from "../components/MainLayout.astro";
 import Whitebox from "../components/Whitebox.astro";
 ---
-
 <html lang="da">
   <body>
     <MainLayout>
@@ -11,7 +10,7 @@ import Whitebox from "../components/Whitebox.astro";
         <video src="../../public/place-holder.mp4"></video>
       </Whitebox>
       <Graybox>
-        <h2>Nyheder</h2>
+        <h2 class="grayboxtext">Nyheder</h2>
         <!-- carousel her!! -->
       </Graybox>
       <Whitebox>
@@ -35,7 +34,7 @@ import Whitebox from "../components/Whitebox.astro";
                 <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
                 <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
             </div>
-            <div>
+            <div class="grayboxtext">
           <h2>Hold</h2>
           <p>Kom og vær med. Vi har hold for dig som er ny, øvet eller har lyst til at komme ud i det frie med familien!</p>
           <button>Tilmeld</button>
@@ -52,8 +51,12 @@ import Whitebox from "../components/Whitebox.astro";
 </html>
 
 <style>
+.grayboxtext{
+    color: var(--primary-lgray);
+}
 .firstimg{
     grid-row: span 2;
+    object-fit:fill;
 }
 .vises{
     display: flex;
@@ -81,4 +84,5 @@ import Whitebox from "../components/Whitebox.astro";
         margin-bottom: -2rem;
         align-items: center;
     }
+}
 </style>

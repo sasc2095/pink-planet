@@ -4,7 +4,7 @@ import LoginForm from "./LoginForm.astro";
 
 <header>
   <div class="login_link">
-    <img class="acc" src="../../public/SVG/account_circle.svg" alt="login icon" />
+    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
    <LoginForm/>
   
 </div>
@@ -54,7 +54,7 @@ import LoginForm from "./LoginForm.astro";
 
 <style>
   header {
-    background-color: #ebd9a6;
+    background-color: var(--primary-dgreen);
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
@@ -70,10 +70,17 @@ import LoginForm from "./LoginForm.astro";
     cursor: pointer;
   }
 
-  
+  .nav_link{
+    padding: 10px;
+    color: var(--primary-lgray);
+  }
+  .nav_link:hover{
+    opacity: 50%;
+  }
   
   /************ burger menu ***********/
-
+@media (max-width: 599px) {
+  
   .burger_nav {
     display: none;
     top: 6rem;
@@ -83,21 +90,22 @@ import LoginForm from "./LoginForm.astro";
   .burger_nav.active {
     display: block;
     position: absolute;
-    background-color: #c0a4a4;
+    background-color: var(--primary-lgray);
     z-index: 4;
     width: 20rem;
     height:100%;
   }
-
+  
   .nav_bar {
     display: flex;
     flex-direction: column;
   }
-
+  
   .nav_link {
     padding: 40px 40px 40px 65px;
+    color: var(--secondary-black);
   }
-
+  
   span {
     display: block;
     width: 30px;
@@ -107,17 +115,17 @@ import LoginForm from "./LoginForm.astro";
   }
 
   .line_1 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-lgray);
   }
 
   .line_2 {
-    background-color: rgb(0, 0, 0);
+    background-color:var(--primary-lgray);
   }
-
+  
   .line_3 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-lgray);
   }
-
+  
   .burgermenu.active .line_2 {
     opacity: 0;
   }
@@ -128,8 +136,9 @@ import LoginForm from "./LoginForm.astro";
   .burgermenu.active .line_1:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-
+  
   .burgermenu.active .line_3:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
 </style>
