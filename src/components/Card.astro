@@ -3,7 +3,7 @@ const {data} = Astro.props;
 ---
 
 <article> 
-<h2>{data.title}</h2>
+<h2 class="title">{data.title}</h2>
 <img src={data.img} alt={data.title}>
 </article>
 
@@ -12,8 +12,14 @@ const {data} = Astro.props;
 article img {
     cursor: pointer;
 }
-article img:hover{
-    transition: transform 0.5s;
+
+.title {
+    position: absolute;
+    z-index: 1;
+    color: azure;
+    background-color: #383838;
+    font-family: 'Sofia Sans Variable', sans-serif;
+    border-radius: 3px;
 }
 
 </style>

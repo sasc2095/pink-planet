@@ -11,24 +11,84 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
 ---
 
 <MainLayout> 
+    <div class="gallery-wrap">
+        <img src="SVG/button_left.svg" id="backBtn" alt="">
+    <h1 class="news">Nyheder</h1>
 
 <section class="card">
+    <div>
 {data.map(show=>{
     return <Card data={show} />;
-})}
+})}  
+</div>
 </section>
+
+
+<img src="SVG/button_right.svg" id="nextBtn" alt="">
+
+    </div>
 
 </MainLayout>
    
 <style>
-.card{
-display: grid;
-grid-template-columns: 1fr 1fr;
+.card div{
 gap: 4rem;
 margin: 2rem;
+padding: 5rem;
 width: 100%;
 align-content: center;
+background-color: #383838;
+display: flex;
+flex: none;
 }
 
+.card div {
+    transition: transform 0.5s;
+}
+
+.card{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        background: #383838;
+    }
+
+    #backBtn, #nextBtn {
+        width: 40px;
+        cursor: pointer;
+        margin: 25px;
+        margin-top: 0rem;
+    }
+
+    .news {
+    font-family: 'Sofia Sans Variable', sans-serif;
+    color: #ffff;
+    margin-top: -65rem;
+    margin-left: -60rem;
+    position: absolute;
+    z-index: 1;
+}
 
 </style>
+
+<script>import { extractDirectives } from "../../node_modules/astro/dist/runtime/server/hydration";
+
+    let scrollContainer = document.querySelector(".gallery");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+    
+    nextBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft += 900;
+    })
+    
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft -= 900;
+    })
+    
+    </script>
