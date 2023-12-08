@@ -1,7 +1,13 @@
 ---
+const {data} = Astro.props;
+console.log(data);
 ---
 
 <article> 
-    <h2>Asfalt-Grus-Asfalt</h2>
-<img src="asfalt-grus-asfalt.webp" alt="Asfalt-Grus-Asfalt">
+<h2>{data.title}</h2>
+<img src={data.img} alt="Asfalt-Grus-Asfalt">
 </article>
+
+<style>
+
+</style>

@@ -1,13 +1,34 @@
 ---
 import MainLayout from "../components/MainLayout.astro";
 import Card from "../components/Card.astro";
+
+const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa2N1YmliaHNqa3N6bnhpZHNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE2OTA2MjAsImV4cCI6MjAxNzI2NjYyMH0.l7F0Hy6ns8ad6EpyOuzi7ZKBmOM2aI7XeF_VX7Ka7dA"
+    },
+}).then(res=>res.json());
 ---
 
 <MainLayout> 
 
 <section class="card">
-<Card />
+{data.map(show=>{
+    return <Card data={show} />;
+})}
 </section>
 
 </MainLayout>
    
+<style>
+.card{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin: 2rem;
+width: 70%;
+align-content: center;
+}
+
+
+</style>
