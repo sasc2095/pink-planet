@@ -9,8 +9,9 @@ import MainLayout from "../components/MainLayout.astro";
         </div>
 
     <section class="grid"> 
+       
+    <div> 
         <h1>Asfalt-Grus-Asfalt</h1>
-    <div>
         <img src="asfalt-grus-asfalt.webp" alt="Asfalt-Grus-Asfalt">
     </div>
     <div class="text">
@@ -30,16 +31,18 @@ margin-top: 5rem;
 
 h1 {
     margin-bottom: 4rem;
-    margin-top: -1rem;
+    margin-top: 1rem;
     text-align: center;
     font-size: 30px;
+    color: white;
 }
 
  .box_button{
         padding: 13px 30px;
         font-size: 14px;
-        background-color: #383838;
+        background-color: #E36C30;
         color: white;
+        text-decoration: none;
         margin: 1.5rem;
         padding: 1.5rem;
         border-radius: 1rem;
@@ -48,10 +51,10 @@ h1 {
     display: grid;
     grid-template-columns: 1fr;
         padding: 10px;
-        margin-left: 10px;
         margin-top: 4rem;
         position: relative;
        justify-content: center;
+       background-color: #383838;
 }    
 
 img {
@@ -75,13 +78,11 @@ img {
 }
 
 @media (min-width:599px) {
-    article {
-margin: 5rem;
-}
+
 
 h1 {
     margin-bottom: 4rem;
-    margin-top: -5rem;
+    margin-top: 1rem;
     text-align: center;
     font-size: 50px;
 }
@@ -89,18 +90,20 @@ h1 {
  .box_button{
         padding: 13px 30px;
         font-size: 14px;
-        background-color: #383838;
+        background-color: #E36C30;
         color: white;
+        text-decoration: none;
         margin: 1.5rem;
         padding: 1.5rem;
         border-radius: 1rem;
     }
     .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
         padding: 10px;
         margin-left: 10px;
         margin-top: 4rem;
+        margin-bottom: 4rem;
         position: relative;
        justify-content: center;
 }    
@@ -114,7 +117,8 @@ img {
     padding: 1rem;
       background: #ffffff;
       color: #383838;
-      margin-top: 1.5rem;
+      margin-top: 8rem;
+      margin-left: 2rem;
         font-size: 15px;
         font-style: normal;
         font-weight:lighter;
