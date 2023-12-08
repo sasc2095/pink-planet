@@ -2,7 +2,8 @@
 import MainLayout from "../components/MainLayout.astro";
 import Card from "../components/Card.astro";
 
-const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", {
+const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", 
+{
     method: "GET",
     headers: {
         apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa2N1YmliaHNqa3N6bnhpZHNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE2OTA2MjAsImV4cCI6MjAxNzI2NjYyMH0.l7F0Hy6ns8ad6EpyOuzi7ZKBmOM2aI7XeF_VX7Ka7dA"
@@ -38,17 +39,12 @@ padding: 5rem;
 width: 100%;
 align-content: center;
 background-color: #383838;
-display: flex;
-flex: none;
+display: grid;
+grid-template-columns: auto auto;
 }
 
 .card div {
     transition: transform 0.5s;
-}
-
-.card{
-    display: flex;
-    overflow-x: scroll;
 }
 
 .gallery-wrap {
