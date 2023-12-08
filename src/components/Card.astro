@@ -1,6 +1,5 @@
 ---
 const {data} = Astro.props;
-console.log(data);
 ---
 
 <article> 
@@ -9,5 +8,12 @@ console.log(data);
 </article>
 
 <style>
+
+article img {
+    cursor: pointer;
+}
+article img:hover{
+    transition: transform 0.5s;
+}
 
 </style>
