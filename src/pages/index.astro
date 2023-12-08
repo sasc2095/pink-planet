@@ -33,6 +33,48 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
    
 <style>
 .card div{
+gap: 1rem;
+margin: 2rem;
+padding: 0.5rem;
+width: 100%;
+align-content: center;
+background-color: #383838;
+display: grid;
+grid-template-columns: auto auto;
+margin-left: 0.2rem;
+
+}
+
+.card div {
+    transition: transform 0.5s;
+}
+
+.gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        background: #383838;
+    }
+
+    #backBtn, #nextBtn {
+        width: 40px;
+        cursor: pointer;
+        margin: 15px;
+        margin-top: 0rem;
+    }
+
+    .news {
+    font-family: 'Sofia Sans Variable', sans-serif;
+    color: #ffff;
+    margin-left: -17rem;
+    margin-bottom: 22rem;
+    position: absolute;
+    z-index: 1;
+}
+
+@media (min-width: 599px){
+    .card div{
 gap: 4rem;
 margin: 2rem;
 padding: 5rem;
@@ -65,10 +107,11 @@ grid-template-columns: auto auto;
     .news {
     font-family: 'Sofia Sans Variable', sans-serif;
     color: #ffff;
-    margin-top: -65rem;
+    margin-top: -46rem;
     margin-left: -60rem;
     position: absolute;
     z-index: 1;
+}
 }
 
 </style>
