@@ -24,6 +24,58 @@ import MainLayout from "../components/MainLayout.astro";
 
 <style>
 article {
+margin: 1rem;
+margin-top: 5rem;
+}
+
+h1 {
+    margin-bottom: 4rem;
+    margin-top: -1rem;
+    text-align: center;
+    font-size: 30px;
+}
+
+ .box_button{
+        padding: 13px 30px;
+        font-size: 14px;
+        background-color: #383838;
+        color: white;
+        margin: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+    .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+        padding: 10px;
+        margin-left: 10px;
+        margin-top: 4rem;
+        position: relative;
+       justify-content: center;
+}    
+
+img {
+    width: 100%;
+    margin-left: 0.3rem;
+    margin-top: -2.5rem;
+} 
+
+.text {
+    padding: 1rem;
+      background: #ffffff;
+      color: #383838;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+        font-size: 15px;
+        font-style: normal;
+        font-weight:lighter;
+        line-height: 1.5rem;
+        border: 1px solid;
+        border-radius: 2rem;
+}
+
+@media (min-width:599px) {
+    article {
 margin: 5rem;
 }
 
@@ -69,6 +121,8 @@ img {
         line-height: 1.5rem;
         border: 1px solid;
         border-radius: 2rem;
+}
+
 }
 
 </style>
