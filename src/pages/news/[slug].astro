@@ -1,0 +1,161 @@
+---
+export async function getStaticPaths() {
+    const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa2N1YmliaHNqa3N6bnhpZHNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE2OTA2MjAsImV4cCI6MjAxNzI2NjYyMH0.l7F0Hy6ns8ad6EpyOuzi7ZKBmOM2aI7XeF_VX7Ka7dA"
+    },
+}).then(response=>response.json());
+
+    return data.map((news)=>{
+        return {
+            params: {slug: news.slug},
+            props: {myData:news},
+        };
+    });
+} 
+
+const {myData} = Astro.props
+console.log(myData);
+
+import MainLayout from "../../components/MainLayout.astro";
+---
+
+<MainLayout>     
+    
+<article>  
+    <div class="tilbage_btn">
+        <a class="box_button" href="/">Tilbage</a>
+        </div>
+ 
+        <section class="grid"> 
+           
+        <div> 
+            <img src={myData.img} alt={myData.title}>
+        </div>
+        <div class="text">
+            <h1 class="title">{myData.title}</h1>
+            <p>{myData.text}</p>
+    </div>
+        </section>
+</article>
+
+</MainLayout>
+
+<style>
+    article {
+    margin: 1rem;
+    margin-top: 5rem;
+    }
+    
+     .box_button{
+            padding: 13px 30px;
+            font-size: 14px;
+            background-color: #E36C30;
+            color: white;
+            text-decoration: none;
+            margin: 1.5rem;
+            margin-left: 0rem;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+        .grid {
+            padding: 10px;
+            margin-top: 4rem;
+            position: relative;
+           justify-content: center;
+           background-color: #383838;
+    }    
+    
+    img {
+        width: 100%;
+        margin-left: 0.3rem;
+        margin-top: 1rem;
+    } 
+    
+    .text p {
+        padding: 20px;
+          background: #ffffff;
+          color: #383838;
+          margin: 0.5rem;
+          margin-bottom: 3rem;
+          margin-top: -2rem;
+            font-size: 15px;
+            font-style: normal;
+            line-height: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Poppins', sans-serif;
+            line-break: auto;
+    }
+    
+    .title {
+        margin-bottom: 4rem;
+        text-align: center;
+        color: white;
+        margin-top: 2rem;
+        line-height: normal;
+        line-break: anywhere;
+        font-size: 35px;
+        font-family: 'Sofia Sans Variable', sans-serif;
+    }
+    
+    
+    @media (min-width:599px) {
+    
+     .box_button{
+            padding: 13px 30px;
+            font-size: 14px;
+            background-color: #E36C30;
+            color: white;
+            text-decoration: none;
+            margin: 0.5rem;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+        .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+           justify-content: center;
+    }    
+    
+    img {
+        width: 100%;
+        margin: 2rem;
+    } 
+    
+    .text p{
+        padding: 1rem;
+          background: #ffffff;
+          color: #383838;
+          margin: 6rem;
+          margin-top: -2rem;
+          margin-left: 6rem;
+            font-size: 15px;
+            font-style: normal;
+            font-weight:lighter;
+            line-height: 1.5rem;
+            border: 1px solid;
+            border-radius: 2rem;
+            font-family: 'Poppins', sans-serif;
+            line-break: auto;
+    }
+
+    .title {
+        color: #ffffff;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        line-height: normal;
+        line-break: anywhere;
+        font-size: 35px;
+        font-family: 'Sofia Sans Variable', sans-serif;
+    }
+    
+    }
+    </style>

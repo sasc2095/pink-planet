@@ -54,18 +54,19 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
       <Whitebox>
         <h2 class="vises">Vi ses hos Borup Cykel Motion</h2>
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
-
-<Carousel2>
-<section class="card">
-  <div>
-{data.map(show=>{
-  return <Card data={show} />;
-})}  
-</div>
-</section>
-</Carousel2>
-
 </Whitebox>
+
+<section class="card">
+{
+data.map((show)=>{
+  return <Card data={show} />;
+})
+} 
+</section>
+
+
+
+
 </MainLayout>
 </body>
 </html>
@@ -106,5 +107,10 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         margin-top: 1rem;
         margin-bottom: -2rem;
         align-items: center;
+    }
+
+    .card {
+      display: flex;
+      overflow-x: scroll;
     }
         }

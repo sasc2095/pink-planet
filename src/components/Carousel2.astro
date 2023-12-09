@@ -1,46 +1,13 @@
 ---
-import Card from "../components/Card.astro";
-const {data} = Astro.props;
+import Card from "./Card.astro";
 ---
 <article>
     <div class="gallery-wrap">
         <img src="SVG/button_left.svg" id="backBtn" alt="">
         <h1 class="news">Seneste ture</h1>
-    
-          <Card>
-            <div class="gallery">
-            <div>
-                <span><a href={`news/${data.slug}`}>
-                    <img src={data.img} alt={data.title}>
-                </a>
-            </span>
-                </div>
-        
-                <div> 
-                    <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24998036453128000/?mibextid=uJjRxr">
-                        <img src="faelles_skovtur.webp" alt="Fælles Skovtur">
-                    </a>
-                </span>
-              </div>  
-              <div>
-                <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24905204962411150/?mibextid=uJjRxr"><img src="morning_gravel_ride.webp" alt="Morning Gravel Ride"></a></span>
-            </div>
-        
-        
-            <div> 
-                <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24716496794615302/?mibextid=uJjRxr"><img src="loevfaldstur.webp" alt="Løvfaldstur i Dyrehaven"></a></span>
-              </div>  
-              
-              <div>
-                <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24715669648031350/?mibextid=uJjRxr"><img src="hummeloreskoven.webp" alt="Hummeloreskoven"></a></span>
-                </div>
-        
-                <div>
-                    <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24696308569967458/?mibextid=uJjRxr"><img src="svenstrup_gods_baghave.webp" alt="Svenstrup Gods baghave"></a></span>
-                 </div>
-  </div>
-    </Card>
   
+        <Card />
+
         <img src="SVG/button_right.svg" id="nextBtn" alt="">
     </div>
     </article>
