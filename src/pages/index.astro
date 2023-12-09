@@ -1,11 +1,8 @@
 ---
 import Graybox from "../components/Graybox.astro";
 import MainLayout from "../components/MainLayout.astro";
-<<<<<<< HEAD
 import Carousel2 from "../components/Carousel2.astro"
-=======
 import Whitebox from "../components/Whitebox.astro";
->>>>>>> af9eac4930ed9c4cf20bc20f40a4700563654fbc
 ---
 <html lang="da">
   <body>
@@ -49,9 +46,6 @@ import Whitebox from "../components/Whitebox.astro";
         <h2 class="vises">Vi ses hos Borup Cykel Motion</h2>
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 
-<<<<<<< HEAD
-<MainLayout> 
-
 <Carousel2>
     <div class="gallery-wrap">
         <img src="SVG/button_left.svg" id="backBtn" alt="">
@@ -86,9 +80,38 @@ import Whitebox from "../components/Whitebox.astro";
     </div>
 </Carousel2>
 
+</Whitebox>
 </MainLayout>
+</body>
+</html>
+
 
 <style>
+  .grayboxtext{
+    color: var(--primary-lgray);
+}
+.firstimg{
+    grid-row: span 2;
+    object-fit:fill;
+}
+.vises{
+    display: flex;
+    justify-content: center;
+  }
+  video {
+    width: 90%;
+    margin: 0 1rem;
+}
+.imggrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.køredage{
+    margin: auto;
+    align-self: center;
+}
     .news {
         font-family: 'Sofia Sans Variable', sans-serif;
         color: #ffff;
@@ -130,6 +153,13 @@ import Whitebox from "../components/Whitebox.astro";
         }
     
     @media (min-width: 599px) {
+      .indexgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+        align-items: center;
+    }
     .news {
         font-family: 'Sofia Sans Variable', sans-serif;
         color: #ffff;
@@ -185,7 +215,8 @@ import Whitebox from "../components/Whitebox.astro";
         .gallery div img:hover {
             cursor: pointer;
             transform: scale(1.1);
-        } 
+        }
+        
         }
     </style>
     
@@ -204,46 +235,3 @@ import Whitebox from "../components/Whitebox.astro";
     })
     
     </script>
-=======
-      </Whitebox>
-    </MainLayout>
-  </body>
-</html>
-
-<style>
-.grayboxtext{
-    color: var(--primary-lgray);
-}
-.firstimg{
-    grid-row: span 2;
-    object-fit:fill;
-}
-.vises{
-    display: flex;
-    justify-content: center;
-  }
-  video {
-    width: 90%;
-    margin: 0 1rem;
-}
-.imggrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-.køredage{
-    margin: auto;
-    align-self: center;
-}
-  @media (min-width: 599px) {
-    .indexgrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 1rem;
-        margin-bottom: -2rem;
-        align-items: center;
-    }
-}
-</style>
->>>>>>> af9eac4930ed9c4cf20bc20f40a4700563654fbc
