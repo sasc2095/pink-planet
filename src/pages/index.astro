@@ -3,6 +3,7 @@ import Graybox from "../components/Graybox.astro";
 import MainLayout from "../components/MainLayout.astro";
 import Card from "../components/Card.astro";
 import Whitebox from "../components/Whitebox.astro";
+import Buttons from "../components/Buttons.astro";
 
 const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", 
 {
@@ -55,6 +56,15 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 </Whitebox>
 
+<Buttons>
+  <article>
+    <div class="gallery-wrap">
+        <img src="SVG/button_left.svg" id="backBtn" alt="">
+        <img src="SVG/button_right.svg" id="nextBtn" alt="">
+    </div>
+    </article>
+</Buttons>
+
 <section class="card">
 {
 data.map((show)=>{
@@ -97,6 +107,25 @@ data.map((show)=>{
     margin: auto;
     align-self: center;
 }
+
+
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    gap: 65rem;
+    margin-top: 15rem;
+    position: absolute;
+    z-index: 1;
+}
+
+#backBtn, #nextBtn {
+    width: 40px;
+    cursor: pointer;
+    margin: 10px;
+}
     
     
     @media (min-width: 599px) {
@@ -117,3 +146,19 @@ data.map((show)=>{
       margin-bottom:5rem
     }
         }
+
+</style>
+
+<script>
+    let scrollContainer = document.querySelector(".card");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+    
+    nextBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft += 900;
+    })
+    
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft -= 900;
+    })
+</script>
