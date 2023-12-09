@@ -2,33 +2,23 @@
 const {data}= Astro.props;
 console.log(data);
 ---
-
-    <h2 class="title">{data.title}</h2>
+<article>
+<div>
     <img src={data.img} alt={data.title}>
-
+</div>
+</article>
 
 <style>
-
 @media (min-width: 599px) { 
     
     img {
-    position: relative;
-      width: 500px;
-      margin: 2rem;
+      margin: 10rem;
+      border-radius: 0;
     }
-        img:hover {
+    img:hover {
             cursor: pointer;
             transform: scale(1.1);
-        }
-   
-    
-        #backBtn, #nextBtn {
-            width: 48px;
-            cursor: pointer;
-            margin: 2rem;
-            margin-top: 5.5rem;
-            z-index: 1;
-        }
+     }
         
         } 
 </style>
