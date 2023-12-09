@@ -56,7 +56,13 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 
 <Carousel2>
-<Card />
+<section class="card">
+  <div>
+{data.map(show=>{
+  return <Card data={show} />;
+})}  
+</div>
+</section>
 </Carousel2>
 
 </Whitebox>
