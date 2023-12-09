@@ -4,7 +4,14 @@ import MainLayout from "../components/MainLayout.astro";
 import Carousel2 from "../components/Carousel2.astro";
 import Card from "../components/Card.astro";
 import Whitebox from "../components/Whitebox.astro";
-import { imageConfig } from "astro:assets";
+
+const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", 
+{
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa2N1YmliaHNqa3N6bnhpZHNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE2OTA2MjAsImV4cCI6MjAxNzI2NjYyMH0.l7F0Hy6ns8ad6EpyOuzi7ZKBmOM2aI7XeF_VX7Ka7dA"
+    },
+}).then(res=>res.json());
 ---
 <html lang="da">
   <body>
@@ -49,7 +56,7 @@ import { imageConfig } from "astro:assets";
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 
 <Carousel2>
-</Card>
+<Card />
 </Carousel2>
 
 </Whitebox>
