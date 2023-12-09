@@ -1,6 +1,16 @@
 ---
-
+//const {data} = Astro.props;
 ---
+
+<!--
+    <a href={`news/${data.slug}`}>
+<article> 
+<h2 class="title">{data.title}</h2>
+<img src={data.img} alt={data.title}>
+</article>
+</a>
+-->
+
 <article>
 <slot />
 </article>

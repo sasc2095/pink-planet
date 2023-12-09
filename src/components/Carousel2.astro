@@ -1,5 +1,6 @@
 ---
 import Card from "../components/Card.astro";
+const {data} = Astro.props;
 ---
 <article>
     <div class="gallery-wrap">
@@ -9,11 +10,17 @@ import Card from "../components/Card.astro";
           <Card>
             <div class="gallery">
             <div>
-                <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24928682546730058/?mibextid=uJjRxr"><img src="asfalt-grus-asfalt.webp" alt="Asfalt-Grus-Asfalt"></a></span>
+                <span><a href={`news/${data.slug}`}>
+                    <img src={data.img} alt={data.title}>
+                </a>
+            </span>
                 </div>
         
                 <div> 
-                    <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24998036453128000/?mibextid=uJjRxr"><img src="faelles_skovtur.webp" alt="Fælles Skovtur"></a></span>
+                    <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24998036453128000/?mibextid=uJjRxr">
+                        <img src="faelles_skovtur.webp" alt="Fælles Skovtur">
+                    </a>
+                </span>
               </div>  
               <div>
                 <span><a href="https://www.facebook.com/groups/335477863143868/permalink/24905204962411150/?mibextid=uJjRxr"><img src="morning_gravel_ride.webp" alt="Morning Gravel Ride"></a></span>
