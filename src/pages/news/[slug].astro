@@ -40,7 +40,7 @@ import MainLayout from "../../components/MainLayout.astro";
 </article>
 
 <div class="graybox">
-    <h2 class="grayboxtext">Læs mere på vores Facebook gruppe = <a href="https://www.facebook.com/groups/335477863143868/">BorupCykelMotion</a></h2>
+    <h2 class="grayboxtext">Læs mere på vores Facebook <br><a href="https://www.facebook.com/groups/335477863143868/">BorupCykelMotion</a></h2>
 </div>
 
 </MainLayout>
@@ -103,6 +103,24 @@ import MainLayout from "../../components/MainLayout.astro";
         font-family: 'Sofia Sans Variable', sans-serif;
     }
     
+    .grayboxtext {
+        color: white;
+        text-align: center;
+    }
+
+    
+.graybox {
+    background-color: #505841;
+    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
     
     @media (min-width:599px) {
     
