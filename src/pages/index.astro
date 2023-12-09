@@ -58,7 +58,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
 
 <Buttons>
   <article>
-    <div class="gallery-wrap">
+    <div class="buttons">
         <img src="SVG/button_left.svg" id="backBtn" alt="">
         <img src="SVG/button_right.svg" id="nextBtn" alt="">
     </div>
@@ -108,24 +108,32 @@ data.map((show)=>{
 }
 
 
-
-.gallery-wrap {
+.card {
+      display: flex;
+      overflow-x: scroll;
+      gap: 2rem;
+      background-color: #383838;
+      margin: 1rem;
+      margin-bottom:5rem
+    }
+.buttons {
     display: flex;
+    flex: none;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
-    gap: 65rem;
-    margin-top: 15rem;
+    margin: 1rem;
+    gap: 20rem;
+    margin-top: 10rem;
     position: absolute;
     z-index: 1;
 }
 
 #backBtn, #nextBtn {
-    width: 40px;
+    width: 30px;
     cursor: pointer;
     margin: 10px;
 }
-    
+
     
     @media (min-width: 599px) {
       .indexgrid {
@@ -144,6 +152,25 @@ data.map((show)=>{
       margin: 0rem;
       margin-bottom:5rem
     }
+
+
+.buttons {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    gap: 65rem;
+    margin-top: 15rem;
+    position: absolute;
+    z-index: 1;
+}
+
+#backBtn, #nextBtn {
+    width: 40px;
+    cursor: pointer;
+    margin: 10px;
+}
         }
 
 </style>
