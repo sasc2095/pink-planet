@@ -1,0 +1,143 @@
+---
+import LoginForm from "./LoginForm.astro";
+---
+
+<header>
+  <div class="login_link">
+    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
+   <LoginForm/>
+  
+</div>
+  </div>
+
+  <div class="burger_nav">
+    <div class="nav_bar">
+      <a class="nav_link" href="/">Forside</a>
+      <a class="nav_link" href="/signup_membership">Medlemsskab sign up</a>
+      <a class="nav_link" href="/membership_page">Medlemsskab</a>
+      <a class="nav_link" href="/info">Information</a>
+      <a class="nav_link" href="/contact">Kontakt</a>
+    </div>
+  </div>
+  <a href="/" class="bcmLogo">
+    <img src="../../public/logo-w.webp" alt="Borup Cykel Motion logo" />
+  </a>
+  <section class="burgermenu">
+    <span class="line_1"></span>
+    <span class="line_2"></span>
+    <span class="line_3"></span>
+  </section>
+</header>
+
+<script>
+
+
+  /* Burgermenu */
+  const burgerMenu = document.querySelector(".burgermenu");
+  const navMenu = document.querySelector(".burger_nav");
+  const marginActive = document.querySelector("main");
+
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    marginActive.classList.toggle("active");
+  });
+
+  document.querySelector(".nav_link").addEventListener("click", remove);
+
+  function remove() {
+    burgerMenu.classList.remove("active");
+    navMenu.classList.remove("active");
+    marginActive.classList.remove("active");
+  }
+</script>
+
+<style>
+  header {
+    background-color: var(--primary-dgreen);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+  }
+  .bcmLogo {
+    margin:  10px 5px;
+    width: 50%;
+  }
+  .acc {
+    margin: 10px;
+    width: 30%;
+    cursor: pointer;
+  }
+
+  .nav_link{
+    padding: 10px;
+    color: var(--primary-lgray);
+  }
+  .nav_link:hover{
+    opacity: 50%;
+  }
+  
+  /************ burger menu ***********/
+@media (max-width: 599px) {
+  
+  .burger_nav {
+    display: none;
+    top: 6rem;
+    right: 0;
+  }
+  
+  .burger_nav.active {
+    display: block;
+    position: absolute;
+    background-color: var(--primary-lgray);
+    z-index: 4;
+    width: 20rem;
+    height:100%;
+  }
+  
+  .nav_bar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav_link {
+    padding: 40px 40px 40px 65px;
+    color: var(--secondary-black);
+  }
+  
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.5s ease-in-out;
+  }
+
+  .line_1 {
+    background-color: var(--primary-lgray);
+  }
+
+  .line_2 {
+    background-color:var(--primary-lgray);
+  }
+  
+  .line_3 {
+    background-color: var(--primary-lgray);
+  }
+  
+  .burgermenu.active .line_2 {
+    opacity: 0;
+  }
+  .burgermenu.active .line_2:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burgermenu.active .line_1:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .burgermenu.active .line_3:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+</style>

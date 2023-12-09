@@ -1,8 +1,55 @@
 ---
+import Graybox from "../components/Graybox.astro";
 import MainLayout from "../components/MainLayout.astro";
+<<<<<<< HEAD
 import Carousel2 from "../components/Carousel2.astro"
+=======
+import Whitebox from "../components/Whitebox.astro";
+>>>>>>> af9eac4930ed9c4cf20bc20f40a4700563654fbc
 ---
+<html lang="da">
+  <body>
+    <MainLayout>
+      <Whitebox>
+        <video src="../../public/place-holder.mp4"></video>
+      </Whitebox>
+      <Graybox>
+        <h2 class="grayboxtext">Nyheder</h2>
+        <!-- carousel her!! -->
+      </Graybox>
+      <Whitebox>
+        <div class="indexgrid">
+        <img src="../../public/orange-bike.webp" alt="orange cykel">
+        <div class="køredage">
+        <h2>Køredage</h2>
+        <p>
+            Søndag. kl.09:00 <br>
+            
+            Tirs og Tors: kl.17:30 (marts-september) <br>
+            
+            Tirs og Tors: kl.16:30 (1.oktober til sommertid)</p>
+        </div>
+    </div>
+      </Whitebox>
+      <Graybox>
+        <div class="indexgrid">
+            <div class="imggrid">
+                <img class="firstimg" src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
+                <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
+                <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
+            </div>
+            <div class="grayboxtext">
+          <h2>Hold</h2>
+          <p>Kom og vær med. Vi har hold for dig som er ny, øvet eller har lyst til at komme ud i det frie med familien!</p>
+          <button>Tilmeld</button>
+        </div>
+    </div>
+      </Graybox>
+      <Whitebox>
+        <h2 class="vises">Vi ses hos Borup Cykel Motion</h2>
+        <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 
+<<<<<<< HEAD
 <MainLayout> 
 
 <Carousel2>
@@ -157,3 +204,46 @@ import Carousel2 from "../components/Carousel2.astro"
     })
     
     </script>
+=======
+      </Whitebox>
+    </MainLayout>
+  </body>
+</html>
+
+<style>
+.grayboxtext{
+    color: var(--primary-lgray);
+}
+.firstimg{
+    grid-row: span 2;
+    object-fit:fill;
+}
+.vises{
+    display: flex;
+    justify-content: center;
+  }
+  video {
+    width: 90%;
+    margin: 0 1rem;
+}
+.imggrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.køredage{
+    margin: auto;
+    align-self: center;
+}
+  @media (min-width: 599px) {
+    .indexgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+        align-items: center;
+    }
+}
+</style>
+>>>>>>> af9eac4930ed9c4cf20bc20f40a4700563654fbc
