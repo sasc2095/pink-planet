@@ -2,11 +2,13 @@
 const {data}= Astro.props;
 console.log(data);
 ---
+<a href={`news/${data.slug}`}>
 <article>
 <div>
     <img src={data.img} alt={data.title}>
 </div>
 </article>
+</a>
 
 <style>
 @media (min-width: 599px) { 
