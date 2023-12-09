@@ -19,6 +19,7 @@ const {myData} = Astro.props
 console.log(myData);
 
 import MainLayout from "../../components/MainLayout.astro";
+import Graybox from "../../components/Graybox.astro";
 ---
 
 <MainLayout>     
@@ -39,6 +40,10 @@ import MainLayout from "../../components/MainLayout.astro";
     </div>
         </section>
 </article>
+
+<div class="graybox">
+    <h2 class="grayboxtext">Se mere på vores facebook = </h2>
+</div>
 
 </MainLayout>
 
@@ -164,6 +169,19 @@ import MainLayout from "../../components/MainLayout.astro";
         font-size: 35px;
         font-family: 'Sofia Sans Variable', sans-serif;
     }
+
+    .grayboxtext {
+        color: white;
+        text-align: center;
+    }
+
     
+.graybox {
+    background-color: #383838;
+    margin: 2rem;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}
+
     }
     </style>
