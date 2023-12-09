@@ -16,12 +16,29 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
 <html lang="da">
   <body>
     <MainLayout>
+
       <Whitebox>
         <video src="../../public/place-holder.mp4"></video>
       </Whitebox>
+      
       <Graybox>
-        <h2 class="grayboxtext">Nyheder</h2>
-        <!-- carousel her!! -->
+        <h2 class="grayboxtext">Vores seneste ture</h2>
+        <Buttons>
+          <article>
+            <div class="buttons">
+                <img src="SVG/button_left.svg" id="backBtn" alt="">
+                <img src="SVG/button_right.svg" id="nextBtn" alt="">
+            </div>
+            </article>
+        </Buttons>
+        
+        <section class="card">
+        {
+        data.map((show)=>{
+          return <Card data={show} />;
+        })
+        } 
+        </section>
       </Graybox>
       <Whitebox>
         <div class="indexgrid">
@@ -55,24 +72,6 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         <h2 class="vises">Vi ses hos Borup Cykel Motion</h2>
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 </Whitebox>
-
-<Buttons>
-  <article>
-    <div class="buttons">
-        <img src="SVG/button_left.svg" id="backBtn" alt="">
-        <img src="SVG/button_right.svg" id="nextBtn" alt="">
-    </div>
-    </article>
-</Buttons>
-
-<section class="card">
-{
-data.map((show)=>{
-  return <Card data={show} />;
-})
-} 
-</section>
-
 
 
 </MainLayout>
