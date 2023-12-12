@@ -8,7 +8,6 @@ import LoginForm from "./LoginForm.astro";
    <LoginForm/>
   
 </div>
-  </div>
 
   <div class="burger_nav">
     <div class="nav_bar">
@@ -59,16 +58,17 @@ import LoginForm from "./LoginForm.astro";
     align-items: center;
   }
   .bcmLogo {
-    margin:  10px 5px;
+    margin:  auto;
     width: 50%;
   }
   .acc {
-    margin: 10px;
+    margin: 0 10%;
     width: 30%;
     cursor: pointer;
   }
 
   .nav_link{
+    margin: auto;
     padding: 10px;
     color: var(--primary-lgray);
   }
@@ -78,7 +78,10 @@ import LoginForm from "./LoginForm.astro";
   
   /************ burger menu ***********/
 @media (max-width: 599px) {
-  
+  .acc{
+    width: 60%;
+    grid-column: 2;
+  }
   .burger_nav {
     display: none;
     top: 6rem;
