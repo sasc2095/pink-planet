@@ -1,9 +1,40 @@
-<div class="gallery">
-    <div>
-        <span>
-            <img src="../../public/asfalt-grus-asfalt.webp" alt="">
-            <img src="../../public/asfalt-grus-asfalt.webp" alt="">
-            <img src="../../public/faelles_skovtur.webp" alt="">
-        </span>
+<div class="logos">
+    <div class="logos-slide">
+        <a href="https://ebteknik.dk/"><img src="../../public/logos/eb-logo.webp" alt=""></a>
+        <a href="http://www.brdrolsen.dk/"><img src="../../public/logos/brdr-logo.webp" alt=""></a>
+        <a href="https://www.enstall.dk/"><img src="../../public/logos/enstall-logo.webp" alt=""></a>
+        <a href="https://www.fribikeshop.dk/butikker/koege"><img src="../../public/logos/fbs-logo.webp" alt=""></a>
+        <a href="https://spar.dk/"><img src="../../public/logos/spar-logo.webp" alt=""></a>
+        <a href="https://skensvedslagteren.dk/"><img src="../../public/logos/ss-logo.webp" alt=""></a>
+        <a href="https://stokholm.tech/"><img src="../../public/logos/st-logo.webp" alt=""></a>
+        <a href="https://www.benefit.dk/osted"><img src="../../public/logos/logo_benefit.svg" alt=""></a>
     </div>
 </div>
+
+<style>
+    @keyframes slide{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    .logos{
+        background-color: rgb(39, 89, 72);
+        overflow: hidden;
+    }
+    .logos:hover .logos-slide{
+        animation-play-state: paused;
+    }
+    .logos-slide{
+        animation: 5s slide infinite linear;
+        white-space: nowrap;
+        animation: 20s slide  infinite linear;
+    } 
+    .logos-slide img{
+    padding: 30px 0;
+    width: 200px;
+    margin:  0 40px;
+}
+</style>
