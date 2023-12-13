@@ -3,11 +3,11 @@ import LoginForm from "./LoginForm.astro";
 ---
 
 <header>
-  <div class="login_link">
-    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
-   <LoginForm/>
-  
-</div>
+  <section class="burgermenu">
+    <span class="line_1"></span>
+    <span class="line_2"></span>
+    <span class="line_3"></span>
+  </section>
 
   <div class="burger_nav">
     <div class="nav_bar">
@@ -20,11 +20,12 @@ import LoginForm from "./LoginForm.astro";
   <a href="/" class="bcmLogo">
     <img src="../../public/logo-w.webp" alt="Borup Cykel Motion logo" />
   </a>
-  <section class="burgermenu">
-    <span class="line_1"></span>
-    <span class="line_2"></span>
-    <span class="line_3"></span>
-  </section>
+
+    <div class="login_link">
+    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
+   <LoginForm/>
+  
+</div>
 </header>
 
 <script>
@@ -60,11 +61,23 @@ import LoginForm from "./LoginForm.astro";
   .bcmLogo {
     margin:  auto;
     width: 50%;
+    grid-column: 1;
+    grid-row: 1;
   }
   .acc {
     margin: 0 10%;
     width: 30%;
     cursor: pointer;
+
+  }
+  .login_link{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .burger_nav{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
   }
 
   .nav_link{
@@ -78,9 +91,16 @@ import LoginForm from "./LoginForm.astro";
   
   /************ burger menu ***********/
 @media (max-width: 599px) {
+  .bcmLogo{
+  grid-column: 2;
+    grid-row: 1;
+  }
+  .burger_nav{
+    grid-column: 1;
+    grid-area: 1;
+  }
   .acc{
     width: 60%;
-    grid-column: 2;
   }
   .burger_nav {
     display: none;
@@ -93,8 +113,8 @@ import LoginForm from "./LoginForm.astro";
     position: absolute;
     background-color: var(--primary-lgray);
     z-index: 4;
-    width: 20rem;
-    height:100%;
+    width: 100%;
+    height:60%;
   }
   
   .nav_bar {
