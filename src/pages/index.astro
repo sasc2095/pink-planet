@@ -4,6 +4,7 @@ import MainLayout from "../components/MainLayout.astro";
 import Card from "../components/Card.astro";
 import Whitebox from "../components/Whitebox.astro";
 import Buttons from "../components/Buttons.astro";
+import Team from "../components/Team.astro";
 
 const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", 
 {
@@ -167,7 +168,8 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
             </g>
             </g>
             </svg>
-                    <div class="køredage">
+
+        <div class="køredage">
         <h2>Køredage</h2>
         <p>
             Søndag. kl.09:00 <br>
@@ -178,21 +180,12 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         </div>
     </div>
       </Whitebox>
-      <Graybox>
-        <div class="indexgrid">
-            <div class="imggrid">
-                <img class="firstimg" src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
-                <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
-                <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
-            </div>
-            <div class="grayboxtext">
-          <h2>Hold</h2>
-          <p>Kom og vær med. Vi har hold for dig som er ny, øvet eller har lyst til at komme ud i det frie med familien!</p>
-          <button>Tilmeld</button>
-        </div>
-    </div>
-      </Graybox>
-      <Whitebox>
+
+<Graybox>
+  <Team />
+</Graybox>
+
+<Whitebox>
         <h2 class="vises">Vi ses hos Borup Cykel Motion</h2>
         <img src="../../public/team_pic.webp" alt="Billede af Borup motion cykel hold">
 </Whitebox>
@@ -229,10 +222,6 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
   .grayboxtext{
     color: var(--primary-lgray);
 }
-.firstimg{
-    grid-row: span 2;
-    object-fit:fill;
-}
 .vises{
     display: flex;
     justify-content: center;
@@ -241,12 +230,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     width: 90%;
     margin: 0 1rem;
 }
-.imggrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
+
 .køredage{
     margin: auto;
     align-self: center;
@@ -278,6 +262,29 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     cursor: pointer;
     margin: 10px;
 }
+
+svg{
+    width: 100%;
+  }
+  #right-wheel{
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  #left-wheel{
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes wheel {
+    from{
+      transform: rotateZ(0deg);
+    }
+    to{
+      transform: rotateZ(360deg);
+    }
+
+  }
 
     
     @media (min-width: 599px) {
