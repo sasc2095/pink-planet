@@ -1,0 +1,70 @@
+---
+---
+
+<section class="grid"> 
+<div class="tekst">
+<h2>Vil du være en del af fælleskabet?</h2>
+<p>Så kom og vær med!<br><br>Vi har et hold for dig som er ny, øvet eller bare har lyst til at komme ud i det blå :)<br><br>Se hvilke hold vi tilbyder ved at klikke på knappen "Tilmeld"</p>
+<a href="membership_page"><button class="btn">Tilmeld</button></a>
+</div>
+
+<div class="imggrid">
+    <div>
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+</div>
+<div class="imggrid2">
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+</div>
+</div>
+</section>
+
+<style>
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.imggrid {
+margin-left: 5rem;
+}
+
+.imggrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.btn {
+ width: 50%;
+ height: 15%;
+ background-color: var(--secondary-orange);
+ color: var(--primary-lgray);
+ border-radius: 50px;
+ cursor: pointer;
+ margin-top: 4.5rem;
+ margin-left: 7rem;
+ font-size: 20px;
+}
+
+.tekst {
+    color: var(--primary-lgray);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 2px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.tekst h2 {
+    margin-bottom: 2rem;
+    font-size: 25px;
+}
+
+</style>

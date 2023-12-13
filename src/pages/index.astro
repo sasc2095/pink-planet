@@ -4,6 +4,7 @@ import MainLayout from "../components/MainLayout.astro";
 import Card from "../components/Card.astro";
 import Whitebox from "../components/Whitebox.astro";
 import Buttons from "../components/Buttons.astro";
+import Team from "../components/Team.astro";
 
 const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch", 
 {
@@ -178,6 +179,11 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
         </div>
     </div>
       </Whitebox>
+
+<Graybox>
+  <Team />
+</Graybox>
+
       <Graybox>
         <div class="indexgrid">
             <div class="imggrid">
