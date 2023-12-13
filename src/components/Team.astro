@@ -2,11 +2,7 @@
 ---
 
 <section class="grid"> 
-<div class="tekst">
-<h2>Vil du være en del af fælleskabet?</h2>
-<p>Så kom og vær med!<br><br>Vi har et hold for dig som er ny, øvet eller bare har lyst til at komme ud i det blå :)<br><br>Se hvilke hold vi tilbyder ved at klikke på knappen "Tilmeld"</p>
-<a href="membership_page"><button class="btn">Tilmeld</button></a>
-</div>
+
 
 <div class="imggrid">
     <div>
@@ -17,15 +13,67 @@
 <img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
 </div>
 </div>
+
+<div class="tekst">
+    <h2>Vil du være en del af fælleskabet?</h2>
+    <p>Så kom og vær med!<br><br>Vi har et hold for dig som er ny, øvet eller bare har lyst til at komme ud i det blå :)<br><br>Se hvilke hold vi tilbyder ved at klikke på knappen "Tilmeld"</p>
+    <a href="membership_page"><button class="btn">Tilmeld</button></a>
+    </div>
 </section>
 
 <style>
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1.5rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.imggrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.btn {
+ width: 60%;
+ height: 18%;
+ background-color: var(--secondary-orange);
+ color: var(--primary-lgray);
+ border-radius: 50px;
+ cursor: pointer;
+ margin-top: 3.5rem;
+ margin-bottom: 2.5rem;
+ margin-left: 3rem;
+ font-size: 20px;
+ font-family: 'Sofia Sans Variable', sans-serif;
+}
+
+.tekst {
+    color: var(--primary-lgray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+.tekst h2 {
+    margin-bottom: 2rem;
+    font-size: 20px;
+    font-family: 'Sofia Sans Variable', sans-serif;
+}
 
 @media (min-width: 599px) {    
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5rem;
+    margin: 2rem;
 }
 
 img {
@@ -34,7 +82,7 @@ img {
 }
 
 .imggrid {
-margin-left: 5rem;
+padding: 2rem;
 }
 
 .imggrid2 {
@@ -61,8 +109,8 @@ margin-left: 5rem;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
-    padding: 2px;
-    margin-top: 2rem;
+    padding: 2rem;
+    margin-top: 4rem;
     margin-left: 2rem;
 }
 
