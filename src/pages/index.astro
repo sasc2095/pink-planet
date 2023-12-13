@@ -257,6 +257,29 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     margin: 10px;
 }
 
+svg{
+    width: 100%;
+  }
+  #right-wheel{
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  #left-wheel{
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes wheel {
+    from{
+      transform: rotateZ(0deg);
+    }
+    to{
+      transform: rotateZ(360deg);
+    }
+
+  }
+
     
     @media (min-width: 599px) {
       .indexgrid {
