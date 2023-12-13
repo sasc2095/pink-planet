@@ -18,6 +18,10 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     <MainLayout>
 
       <Whitebox>
+        <div class="videoText">
+          <h1>Velkommen til Borup Cykel Motion</h1>
+          <a class="button" href="/membership_page.astro">Tilmeld</a>
+        </div>
         <video src="../../public/place-holder.mp4"></video>
       </Whitebox>
       
@@ -208,16 +212,24 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
 
 
 <style>
+  .videoText{
+    width: 50%;
+    color: var(--primary-lgray);
+    background-color: rgba(128, 128, 128, 0.349);
+    position: absolute;
+    margin: 0 20px;
+    padding-bottom: 20px;
+  }
   svg{
     width: 100%;
   }
   #right-wheel{
-    animation: wheel 4s infinite linear;
+    animation: wheel 10s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
   }
   #left-wheel{
-    animation: wheel 4s infinite linear;
+    animation: wheel 10s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
   }
