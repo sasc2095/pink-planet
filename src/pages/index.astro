@@ -24,7 +24,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
           <h1>Velkommen til Borup Cykel Motion</h1>
           <a class="button" aria-label="Kom til tilmeldings siden" href="/membership_page.astro">Tilmeld</a>
         </div>
-        <video src="../../public/place-holder.mp4"></video>
+        <video autoplay src="../../public/bikevideo.MP4"></video>
       </Whitebox>
       
       <Graybox>
@@ -207,7 +207,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     color: var(--primary-lgray);
     background-color: rgba(128, 128, 128, 0.349);
     position: absolute;
-    margin: 0 20px;
+    margin: 0;
     padding-bottom: 20px;
   }
   svg{
@@ -250,8 +250,9 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     justify-content: center;
   }
   video {
-    width: 90%;
-    margin: 0 1rem;
+    padding: 0;
+    width: 100%;
+    margin: 0;
 }
 .køredage{
     margin: auto;
