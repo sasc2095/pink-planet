@@ -3,119 +3,113 @@ import MainLayout from "../components/MainLayout.astro";
 import InfoBox from "../components/InfoBox.astro";
 --- 
 
-<html lang="da">
-<body>
 <MainLayout>
-
-<section class="grid">
-    <InfoBox>            
-            <h2 class="header_box">Hold</h2>
+    <div class="grid">
+        <InfoBox>            
+                <h2 class="header_box">Hold</h2>
+                <div class="text_box">
+                <p> 
+                    <b>Vi kører så vidt muligt i 3 hold.</b><br>
+                   
+                    <br><b>Hold 1</b>
+                    <br>Kører søndag: 90-120 km</br>
+                    Anslået gennemsnitshastighed: 30-35 km/t.  
+                    <br>Tirsdag og torsdag: 60-75 km.<br>
+                  
+                    <br><b>Hold 2</b>
+                    <br>Kører søndag: 75-100 km
+                    <br>Anslået gennemsnitshastighed: 28-32 km/t. 
+                    <br> Tirsdag og torsdag: 50-65 km.<br>
+                   
+                    <br><b>Hold 3</b>
+                    <br> Kører søndag: 40-60 km 
+                    <br>Anslået gennemsnitsfart: 20-25 km/t. 
+                    <br>Tirsdag og torsdag: 30-50 km<br>
+                   
+                    <br><b>OBS.</b> Vintertræning udendørs foregår for de flestes vedkommende på Mountainbike og gravelcykler.
+                    <br>De angivne tider kan naturligvis variere, afhængig af vind og vejr samt den aktuelle deltagersammensætning. 
+                    <br>Det sker, at hold 1 og 2 kører sammen.</br>
+                    <br>
+                </p>
+            </div>
+    </InfoBox>
+    
+    <div class="animation">
+        <video controls autoplay loop><source src="../public/animation_10raad.webm" type="video/webm"></video>
+        </div>
+ </div>
+        <InfoBox>    
+            <h2 class="header_box">Praktisk Information</h2>
+       
             <div class="text_box">
-            <p> 
-                <b>Vi kører så vidt muligt i 3 hold.</b><br>
-               
-                <br><b>Hold 1</b>
-                <br>Kører søndag: 90-120 km</br>
-                Anslået gennemsnitshastighed: 30-35 km/t.  
-                <br>Tirsdag og torsdag: 60-75 km.<br>
-              
-                <br><b>Hold 2</b>
-                <br>Kører søndag: 75-100 km
-                <br>Anslået gennemsnitshastighed: 28-32 km/t. 
-                <br> Tirsdag og torsdag: 50-65 km.<br>
-               
-                <br><b>Hold 3</b>
-                <br> Kører søndag: 40-60 km 
-                <br>Anslået gennemsnitsfart: 20-25 km/t. 
-                <br>Tirsdag og torsdag: 30-50 km<br>
-               
-                <br><b>OBS.</b> Vintertræning udendørs foregår for de flestes vedkommende på Mountainbike og gravelcykler.
-                <br>De angivne tider kan naturligvis variere, afhængig af vind og vejr samt den aktuelle deltagersammensætning. 
-                <br>Det sker, at hold 1 og 2 kører sammen.</br>
-                <br>
-            </p>
-        </div>
-</InfoBox>
-
-<div class="animation">
-    <video controls autoplay loop><source src="../public/animation_10raad.webm" type="video/webm"></video>
-    </div>
-</section>
-
-<InfoBox>    
-        <h2 class="header_box">Praktisk Information</h2>
-   
-        <div class="text_box">
-        <p class="text_box2">Interesserede er meget velkomne til at køre med et par gange, for lige at se hvad det hele er for noget. <br>
-            <br>Det er vigtigt at cyklen er i orden med gode dæk, flaskestativ (husk drikkelse), pumpe, gear og <br> kæde som er funktionelle. 
-            <br>Husk også at medbringe minimum 2 slanger til eventuelle punkteringer. <br> Er der ikke hurtigspænd på cyklen , husk også relevant værktøj.<br>
-                
-            <br>At køre i flok er nogle gange en ny disciplin for nye medlemmer. 
-            <br> Det er vigtigt at man er koncentreret, da vi ligger tæt på hinanden, for at få læ for vinden. 
-            <br> Et umotiveret svaj med cyklen, kan betyde at en selv og andre styrter. Se gerne fanebladet "Køreregler"<br>
-                
-            <br>Vi er også meget sociale i Borup Cykel Motion. 
-            <br>Vi har adskillige arrangementer hen over sæsonen, hvor der er anledning til at mødes over en bid brød og <br> lidt at drikke, herunder ikke mindst den traditionsrige julefrokost, som hvert år holdes samtidig med frigivels-<br>en af Tuborgs Juleøl. 
-            <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
-        </div>
-</InfoBox>
+            <p class="text_box2">Interesserede er meget velkomne til at køre med et par gange, for lige at se hvad det hele er for noget. <br>
+                <br>Det er vigtigt at cyklen er i orden med gode dæk, flaskestativ (husk drikkelse), pumpe, gear og <br> kæde som er funktionelle. 
+                <br>Husk også at medbringe minimum 2 slanger til eventuelle punkteringer. <br> Er der ikke hurtigspænd på cyklen , husk også relevant værktøj.<br>
+                    
+                <br>At køre i flok er nogle gange en ny disciplin for nye medlemmer. 
+                <br> Det er vigtigt at man er koncentreret, da vi ligger tæt på hinanden, for at få læ for vinden. 
+                <br> Et umotiveret svaj med cyklen, kan betyde at en selv og andre styrter. Se gerne fanebladet "Køreregler"<br>
+                    
+                <br>Vi er også meget sociale i Borup Cykel Motion. 
+                <br>Vi har adskillige arrangementer hen over sæsonen, hvor der er anledning til at mødes over en bid brød og <br> lidt at drikke, herunder ikke mindst den traditionsrige julefrokost, som hvert år holdes samtidig med frigivels-<br>en af Tuborgs Juleøl. 
+                <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
+            </div>
+    </InfoBox>
 
 </MainLayout>
-</body>
-</html>
-
 
 <style>
-h2 {
-    color: var(--primary-lgray);
-    text-align: center;
-}
-
-.header_box {
-padding: 1rem 1rem;
-background-color: var(--primary-dgreen);
-margin: 1rem;
-margin-top: 2.5rem;
-}
-
-.text_box {
-display: grid;
-justify-content: center;
-margin: 1rem;
-border: 1px solid;
-color: var(--secondary-black);
-padding: 1.5rem;
-margin-top: -1rem;
-margin-bottom: 2.5rem;
-}
-
-.animation video {
-width: 420px;
-margin: 1rem;
-}
-
-@media (min-width: 599px) {
-    .grid {
-        margin-top: 1rem;
-        margin-bottom: -2rem;
-        display: flex;
-        justify-content: center;
+    h2 {
+        color: var(--primary-lgray);
+        text-align: center;
     }
-
-    .text_box2 {
-    margin-bottom: 1.5rem;
+    
+    .header_box {
+    padding: 1rem 1rem;
+    background-color: var(--primary-dgreen);
+    margin: 1rem;
+    margin-top: 2.5rem;
     }
-
-img {
-display: grid;    
-width: 97.5%;
-margin-top: 2.5rem;
-}
-
-.animation video {
-width: 300px;
-margin-top: 2.5rem;
-}
- }
-
-</style>
+    
+    .text_box {
+    display: grid;
+    justify-content: center;
+    margin: 1rem;
+    border: 1px solid;
+    color: var(--secondary-black);
+    padding: 1.5rem;
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+    }
+    
+    .animation video {
+    width: 360px;
+    margin: 1rem;
+    }
+    
+    @media (min-width: 599px) {
+        .grid {
+            margin-top: 1rem;
+            margin-bottom: -2rem;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .text_box2 {
+        margin-bottom: 1.5rem;
+        }
+    
+    img {
+    display: grid;    
+    width: 97.5%;
+    margin-top: 2.5rem;
+    }
+    
+    .animation video {
+    width: 300px;
+    margin-top: 2.5rem;
+    }
+     }
+    
+    </style>
+    
