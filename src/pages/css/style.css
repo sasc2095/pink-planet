@@ -29,17 +29,17 @@ body {
 
   /* fonts */
 
-p, h3, h4, li{ 
+p, h3, h4{ 
   font-family: 'Poppins', sans-serif;
 }
-p, li{
+p{
   font-size: small;
 }
 h2{
-  font-size: large;
+  font-size: x-large;
 }
 
-h1, h2{
+h1, h2, li{
    font-family: 'Sofia Sans Variable', sans-serif;
 }
 img {
