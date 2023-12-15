@@ -1,0 +1,122 @@
+---
+---
+
+<section class="grid"> 
+
+
+<div class="imggrid">
+    <div>
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+</div>
+<div class="imggrid2">
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+<img src="/public/faelles_skovtur.webp" alt="faelles_skovtur.webp">
+</div>
+</div>
+<div>
+<div class="tekst">
+    <h2>Vil du være en del af fælleskabet?</h2>
+    <p>Så kom og vær med!<br><br>Vi har et hold for dig som er ny, øvet eller bare har lyst til at komme ud i det blå :)<br><br>Se hvilke hold vi tilbyder ved at klikke på knappen "Tilmeld"</p>
+</div>
+<a href="membership_page" class="button">Tilmeld</a>
+</div>
+</section>
+
+<style>
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1.5rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.imggrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+.button {
+    position:absolute;
+    background-color: var(--secondary-orange);
+    padding: .9rem ;
+    margin: 0 0 0 8rem;
+    color: var(--primary-lgray);
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Sofia Sans Variable', sans-serif;
+  }
+  
+
+.tekst {
+    color: var(--primary-lgray);
+    line-height: 1.5;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tekst h2 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 599px) {    
+    .button{
+    margin: 0 0 0 11rem ;
+    text-decoration: none;   
+    font-family: 'Sofia Sans Variable', sans-serif;
+    font-size: x-large;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    }
+
+    .button:hover {
+        transform: scale(1.1);
+    }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.imggrid {
+padding: 2rem;
+}
+
+.imggrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+
+.tekst {
+    color: var(--primary-lgray);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+.tekst h2 {
+    margin-bottom: 2rem;
+    font-size: 25px;
+}
+}
+
+</style>

@@ -5,37 +5,51 @@ main {
 }
 
 :root {
-  --primary-dgreen: #2A3823;
-  --primary-lgray: #F9F9F9;
-  --secondary-orange: #E36C30;
-  --secondary-black:#000000;
-  --secondary-dgray:#383838;
-  
+  --primary-dgreen: #2a3823;
+  --primary-lgray: #f9f9f9;
+  --secondary-orange: #e36c30;
+  --secondary-black: #000000;
+  --secondary-dgray: #383838;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
- 
 }
 
 body {
   line-height: 1.4;
-   background-color:  #ffffff;
+  background-color: var(--primary-lgray);
 }
 
+/* fonts */
 
-  /* fonts */
-
-p, h2, h3, h4, li{ 
-  font-family: 'Poppins', sans-serif;
+p,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-size: 14px;
 }
 
+h3 {
+  font-size: 18px;
+}
 
-h1{
-   font-family: 'Sofia Sans Variable', sans-serif;
+h2 {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1,
+h2,
+li {
+  font-family: "Sofia Sans Variable", sans-serif;
 }
 img {
   max-width: 100%;
@@ -44,10 +58,39 @@ img {
   border-radius: 1rem;
 }
 
+@media (min-width: 599px) {
+  /* fonts */
 
+  p,
+  h3,
+  h4 {
+    font-family: "Poppins", sans-serif;
+  }
+  p {
+    font-size: 18px;
+  }
 
+  h3 {
+    font-size: 25px;
+  }
 
+  h2 {
+    font-size: 30px;
+  }
 
+  h1 {
+    font-size: 35px;
+  }
 
-
-
+  h1,
+  h2,
+  li {
+    font-family: "Sofia Sans Variable", sans-serif;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}

@@ -3,17 +3,15 @@ import LoginForm from "./LoginForm.astro";
 ---
 
 <header>
-  <div class="login_link">
-    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
-   <LoginForm/>
-  
-</div>
-  </div>
+  <section class="burgermenu">
+    <span class="line_1"></span>
+    <span class="line_2"></span>
+    <span class="line_3"></span>
+  </section>
 
   <div class="burger_nav">
     <div class="nav_bar">
       <a class="nav_link" href="/">Forside</a>
-      <a class="nav_link" href="/signup_membership">Medlemsskab sign up</a>
       <a class="nav_link" href="/membership_page">Medlemsskab</a>
       <a class="nav_link" href="/info">Information</a>
       <a class="nav_link" href="/contact">Kontakt</a>
@@ -22,11 +20,12 @@ import LoginForm from "./LoginForm.astro";
   <a href="/" class="bcmLogo">
     <img src="../../public/logo-w.webp" alt="Borup Cykel Motion logo" />
   </a>
-  <section class="burgermenu">
-    <span class="line_1"></span>
-    <span class="line_2"></span>
-    <span class="line_3"></span>
-  </section>
+
+    <div class="login_link">
+    <img class="acc" src="../../public/SVG/account.svg" alt="login icon" />
+   <LoginForm/>
+  
+</div>
 </header>
 
 <script>
@@ -60,26 +59,53 @@ import LoginForm from "./LoginForm.astro";
     align-items: center;
   }
   .bcmLogo {
-    margin:  10px 5px;
+    margin:  auto;
     width: 50%;
+    grid-column: 1;
+    grid-row: 1;
   }
   .acc {
-    margin: 10px;
-    width: 30%;
+    margin: 0 10%;
+    width: 20%;
     cursor: pointer;
+
+  }
+  .login_link{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .burger_nav{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
   }
 
   .nav_link{
+   font-family: 'Sofia Sans Variable', sans-serif;
+   font-size: larger;
+    margin: auto;
     padding: 10px;
     color: var(--primary-lgray);
+    text-decoration: none;
   }
   .nav_link:hover{
     opacity: 50%;
+    text-decoration: underline;
   }
   
   /************ burger menu ***********/
 @media (max-width: 599px) {
-  
+  .bcmLogo{
+  grid-column: 2;
+    grid-row: 1;
+  }
+  .burger_nav{
+    grid-column: 1;
+    grid-area: 1;
+  }
+  .acc{
+    width: 60%;
+  }
   .burger_nav {
     display: none;
     top: 6rem;
@@ -91,8 +117,8 @@ import LoginForm from "./LoginForm.astro";
     position: absolute;
     background-color: var(--primary-lgray);
     z-index: 4;
-    width: 20rem;
-    height:100%;
+    width: 100%;
+    height:60%;
   }
   
   .nav_bar {

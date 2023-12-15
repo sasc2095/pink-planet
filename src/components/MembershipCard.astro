@@ -4,36 +4,48 @@ const { price } = Astro.props;
 ---
 
 <section>
-  <h2>{header}</h2>
-  <h3>{price}</h3>
+  <h3>{header}</h3>
+  <h4>{price}</h4>
   <p class="small_text">Beløb dækker kalenderåret</p>
-  <button> <a href="/signup_membership">Tilmeld</a></button>
+  <button><a href="/signup_membership">Tilmeld</a></button>
 </section>
 
 <style>
   section {
-    border: 1px solid black;
+    border: 1px solid var(--secondary-black);
     padding: 2rem 2rem;
     text-align: center;
   }
 
   button {
-    background-color: #d38644;
+    background-color: var(--secondary-orange);
     border-radius: 5px;
     text-align: center;
-    text-decoration: none;
     border: none;
-
     display: inline-block;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
   }
 
   a {
     text-decoration: none;
-    color: white;
+    color: var(--primary-lgray);
   }
 
-  a:hover {
-    text-decoration: underline;
+
+  @media (min-width: 599px) { 
+  button {
+      margin-top: 2em;
+      border-radius: 40px;
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      font-size: large;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
   }
 </style>
