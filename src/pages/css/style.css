@@ -52,3 +52,35 @@ img {
   object-fit: cover;
   border-radius: 1rem;
 }
+
+@media (min-width: 599px) {
+  /* fonts */
+
+  p,
+  h3,
+  h4 {
+    font-family: "Poppins", sans-serif;
+  }
+  p {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h1,
+  h2,
+  li {
+    font-family: "Sofia Sans Variable", sans-serif;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}
