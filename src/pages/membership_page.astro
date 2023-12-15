@@ -9,7 +9,7 @@ import Calendar from "../components/Calendar.astro";
 <MainLayout>
   <article>
   <h1 id="black_h1">Bliv en del af fælleskabet</h1>
-  <img src="../../public/team_pic.webp" alt="holdbillede" />
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/xvZ0tcCvQpM?si=_MUSnoOnemC1BC9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
   <LoginForm />
 
@@ -101,8 +101,22 @@ import Calendar from "../components/Calendar.astro";
     border-radius: 0;
   }
 
+  iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-top: 0.5em;
+  }
+
 
   @media (min-width: 599px) {
+
+  iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-top: 0.5em;
+  }
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
