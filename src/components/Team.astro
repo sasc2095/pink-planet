@@ -40,31 +40,37 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 }
-.button{
+.button {
     position:absolute;
     background-color: var(--secondary-orange);
     padding: .7rem ;
-    margin: 1rem 0 0 1rem ;
+    margin: 0 0 0 10rem;
     color: var(--primary-lgray);
-    border-radius: 15px;
+    border-radius: 20px;
     text-decoration: none;
+    font-family: 'Sofia Sans Variable', sans-serif;
   }
+  
 
 .tekst {
     color: var(--primary-lgray);
     line-height: 1.5;
-    margin: 1rem 0 0 1rem;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .tekst h2 {
     margin-bottom: 2rem;
+    margin-top: 2rem;
     font-size: 25px;
 }
 
 @media (min-width: 599px) {    
     .button{
     margin: 1rem 0 0 4rem ;
-    text-decoration: none;
+    text-decoration: none;   
+    font-family: 'Sofia Sans Variable', sans-serif;
+    cursor: pointer;
     }
 .grid {
     display: grid;
