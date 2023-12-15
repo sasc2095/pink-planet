@@ -3,8 +3,9 @@ import MainLayout from "../components/MainLayout.astro";
 import InfoBox from "../components/InfoBox.astro";
 --- 
 
+<html lang="da">
+<body>
 <MainLayout>
-<article>
 <section class="grid">
     <InfoBox>            
             <h2 class="header_box">Hold</h2>
@@ -57,9 +58,11 @@ import InfoBox from "../components/InfoBox.astro";
             <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
         </div>
 </InfoBox>
-</article>
 
-</MainLayout> 
+
+</MainLayout>
+</body>
+</html>
 
 
 <style>
@@ -84,10 +87,6 @@ color: var(--secondary-black);
 padding: 1.5rem;
 margin-top: -1rem;
 margin-bottom: 2.5rem;
-}
-
-img {
-display: none
 }
 
 .animation video {
