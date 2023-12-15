@@ -7,7 +7,7 @@ const { price } = Astro.props;
   <h3>{header}</h3>
   <h4>{price}</h4>
   <p class="small_text">Beløb dækker kalenderåret</p>
-  <button> <a href="/signup_membership">Tilmeld</a></button>
+  <button><a href="/signup_membership">Tilmeld</a></button>
 </section>
 
 <style>
@@ -23,9 +23,10 @@ const { price } = Astro.props;
     text-align: center;
     text-decoration: none;
     border: none;
-
     display: inline-block;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+      border-radius: 30px;
   }
 
   a {
@@ -35,5 +36,15 @@ const { price } = Astro.props;
 
   a:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 599px) { 
+  button {
+      margin-top: 2em;
+      border-radius: 40px;
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      font-size: large;
+    }
   }
 </style>
