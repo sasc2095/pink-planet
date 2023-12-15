@@ -3,11 +3,9 @@ import MainLayout from "../components/MainLayout.astro";
 import InfoBox from "../components/InfoBox.astro";
 --- 
 
-<html lang="da">
-<body>
-    <MainLayout>
-
-<article class="grid">
+<MainLayout>
+<article>
+<section class="grid">
     <InfoBox>            
             <h2 class="header_box">Hold</h2>
             <div class="text_box">
@@ -40,7 +38,7 @@ import InfoBox from "../components/InfoBox.astro";
 <div class="animation">
     <video controls autoplay loop><source src="../public/animation_10raad.webm" type="video/webm"></video>
     </div>
-</article>
+</section>
 
 <InfoBox>    
         <h2 class="header_box">Praktisk Information</h2>
@@ -59,11 +57,10 @@ import InfoBox from "../components/InfoBox.astro";
             <br>Efter cykelturen slutter vi gerne af ved klubhuset, og er der tid og lyst kan man også nyde en <br> øl/vand og evaluere turen.</p>
         </div>
 </InfoBox>
-
+</article>
 
 </MainLayout> 
-</body>
-</html>
+
 
 <style>
 h2 {
