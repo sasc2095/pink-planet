@@ -141,7 +141,7 @@
 
   .wrapper {
     width: 450px;
-    background: #fff;
+    background: var(--primary-lgray);
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   }
@@ -150,7 +150,7 @@
     align-items: center;
     padding: 25px 30px 10px;
     justify-content: space-between;
-    background-color: #2a3823;
+    background-color: var(--primary-dgreen);
   }
 
   #calendar_header .icons {
@@ -164,7 +164,6 @@
     color: #878787;
     text-align: center;
     line-height: 38px;
-    font-size: 1.9rem;
     user-select: none;
     border-radius: 50%;
   }
@@ -172,12 +171,11 @@
     margin-right: -10px;
   }
   #calendar_header .icons span:hover {
-    background: #d38644;
+    background: var(--secondary-orange);
   }
   #calendar_header .current-date {
-    font-size: 1.45rem;
-    font-weight: 500;
-    color: white;
+    font-size: x-large;
+    color: var(--primary-lgray);
   }
   .calendar {
     padding: 20px;
@@ -192,9 +190,8 @@
     margin-bottom: 20px;
   }
   .calendar li {
-    color: #2a3823;
+    color: var(--primary-dgreens);
     width: calc(100% / 7);
-    font-size: 1.07rem;
   }
   .calendar .weeks li {
     font-weight: 500;
@@ -224,9 +221,9 @@
     transform: translate(-50%, -50%);
   }
   .days li.active::before {
-    background: #d38644;
+    background: var(--secondary-orange);
   }
   .days li:not(.active):hover::before {
-    background: #f2f2f2;
+    background: #e0e0e0;
   }
 </style>

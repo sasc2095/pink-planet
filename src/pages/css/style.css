@@ -23,18 +23,23 @@ main {
 
 body {
   line-height: 1.4;
-   background-color:  #ffffff;
+   background-color: var(--primary-lgray);
 }
 
 
   /* fonts */
 
-p, h2, h3, h4, li{ 
+p, h3, h4, li{ 
   font-family: 'Poppins', sans-serif;
 }
+p, li{
+  font-size: small;
+}
+h2{
+  font-size: large;
+}
 
-
-h1{
+h1, h2{
    font-family: 'Sofia Sans Variable', sans-serif;
 }
 img {
