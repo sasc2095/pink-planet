@@ -33,6 +33,11 @@ h4 {
 p {
   font-size: 14px;
 }
+
+h3 {
+  font-size: 18px;
+}
+
 h2 {
   font-size: 20px;
 }
@@ -64,6 +69,11 @@ img {
   p {
     font-size: 18px;
   }
+
+  h3 {
+    font-size: 25px;
+  }
+
   h2 {
     font-size: 30px;
   }
