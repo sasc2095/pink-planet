@@ -7,6 +7,7 @@ import Calendar from "../components/Calendar.astro";
 ---
 
 <MainLayout>
+  <article>
   <h1 id="black_h1">Velkommen til Borup Cykel Motion</h1>
   <img src="../../public/team_pic.webp" alt="holdbillede" />
 
@@ -53,6 +54,7 @@ import Calendar from "../components/Calendar.astro";
     OBS. vi har ikke hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie pakke. Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
   </p>
   <Calendar/>
+</article>
 </MainLayout>
 
 <style>
@@ -64,13 +66,30 @@ import Calendar from "../components/Calendar.astro";
     background-color: #2a3823;
     color: white;
     padding: 1rem 1rem;
-    margin: 0;
   }
 
-  .container,
+  .container, 
   .obs {
     padding: 1rem 1rem;
   }
+  .header_box {
+    padding: 1rem 1rem;
+    background-color: #2a3823;
+    margin: 1rem;
+    margin-top: 2.5rem;
+    color: white;
+    text-align: center;
+  }
+  
+  article {
+    margin: 1rem;
+  }
+
+  article img {
+    width: 100%;
+    border-radius: 0;
+  }
+
 
   @media (min-width: 599px) {
     .container {
@@ -97,6 +116,11 @@ import Calendar from "../components/Calendar.astro";
     color: black;
     padding: 1.5rem;
     margin-bottom: 2.5rem;
+  }
+
+  .h1_card {
+    margin: 0rem;
+    margin-bottom: 0rem;
   }
 
 
