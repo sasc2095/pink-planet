@@ -8,13 +8,13 @@ import Calendar from "../components/Calendar.astro";
 
 <MainLayout>
   <article>
-  <h1 id="black_h1">Velkommen til Borup Cykel Motion</h1>
+  <h1 id="black_h1">Bliv en del af fælleskabet</h1>
   <img src="../../public/team_pic.webp" alt="holdbillede" />
 
   <LoginForm />
 
   <Infobox>
-    <h1 class="header_box">Kontigentsatser</h1>
+    <h2 class="header_box">Kontigentsatser</h2>
 
     <div class="text_box">
       <p>
@@ -34,35 +34,40 @@ import Calendar from "../components/Calendar.astro";
     </div>
   </Infobox>
 
-  <h1 class="h1_card">Nybegynder</h1>
+  <h2 class="h2_card">Nybegynder</h2>
   <div class="container">
     <MembershipCard header="Medlemmer 18+" price="Kr. 500" />
-    <MembershipCard header="Familie-pakke" price="Kr. 800" />
+    <MembershipCard header="Familie hold" price="Kr. 800" />
   </div>
 
   <p class="obs">
-    OBS. vi har ikke hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie pakke. Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
+    OBS. vi har IKKE hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie hold. <br>Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
   </p>
 
-  <h1 class="h1_card">Øvet</h1>
+  <h2 class="h2_card">Øvet</h2>
   <div class="container">
     <MembershipCard header="Medlemmer 18+" price="Kr. 500" />
     <MembershipCard header="Familie hold" price="Kr. 500" />
   </div>
 
   <p class="obs">
-    OBS. vi har ikke hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie pakke. Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
+    OBS. vi har IKKE hold med medlemmer under 18. Medlemmer under 18 skal følges med en voksen, derfor tilbyder vi en familie hold. <br>Vi tilbyder pladser til max. 20 pr. hold. Først til mølle princip.
   </p>
   <Calendar/>
 </article>
 </MainLayout>
 
 <style>
+
   h1 {
+    text-align: center;
+    margin: 2rem; 
+  }
+  h2 {
     color: #2a3823;
     text-align: center;
   }
-  .h1_card {
+  .h2_card {
     background-color: #2a3823;
     color: white;
     padding: 1rem 1rem;
@@ -70,7 +75,13 @@ import Calendar from "../components/Calendar.astro";
 
   .container, 
   .obs {
-    padding: 1rem 1rem;
+    padding: 0rem 0rem;
+  }
+
+  .obs {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   .header_box {
     padding: 1rem 1rem;
@@ -118,10 +129,16 @@ import Calendar from "../components/Calendar.astro";
     margin-bottom: 2.5rem;
   }
 
-  .h1_card {
+  .h2_card {
     margin: 0rem;
     margin-bottom: 0rem;
   }
 
+  .obs {
+    text-align: left;
+    line-break: normal;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
 </style>
