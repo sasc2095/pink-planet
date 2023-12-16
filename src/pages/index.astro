@@ -22,9 +22,9 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
       <article>
         <Whitebox>
           <div class="videoText">
-            <h1>Velkommen til Borup Cykel Motion</h1>
+            <h2>Velkommen til Borup Cykel Motion</h2>
             <p class="info-text">Bliv en del af et fællesskab hvor cykling og socialt samværd går hånd i hånd.</p>
-            <a class="button" aria-label="Kom til tilmeldings siden" href="./membership_page.astro">Tilmeld</a>
+            <a class="button" aria-label="Kom til tilmeldings siden" href="/membership_page.astro">Tilmeld</a>
           </div>
           <video autoplay src="/bikevideo.MP4"></video>
         </Whitebox>
@@ -514,12 +514,15 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
   .videoText {
     width: 93%;
     color: var(--primary-lgray);
-
     background-color: var(--primary-dgreen);
     opacity: 90%;
-
     position: absolute;
-    padding-bottom: 20px;
+    text-align: start;
+    padding: 0.5rem;
+  }
+
+  .info-text {
+    display: none;
   }
   svg {
     width: 100%;
@@ -543,19 +546,13 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     }
   }
 
-  h1 {
+  h2 {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     text-align: center;
   }
   .button {
-    background-color: var(--secondary-orange);
-    padding: 0.5rem;
-    margin: 1rem 1.5rem;
-    color: var(--primary-lgray);
-    border-radius: 0.7rem;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
+  display: none;
   }
   .grayboxtext {
     padding: 1rem 2rem;
@@ -614,6 +611,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
     .videoText {
       margin: 0 0 0 0rem;
       width: 50%;
+      height: 30%;
       color: var(--primary-lgray);
       background-color: var(--primary-dgreen);
       opacity: 90%;
@@ -622,7 +620,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
       border-end-end-radius: 10px;
     }
 
-    h1 {
+    h2 {
       margin-bottom: 1rem;
       text-align: left;
     }
@@ -661,7 +659,7 @@ const data = await fetch("https://tpkcubibhsjksznxidsa.supabase.co/rest/v1/fetch
       margin: 10px;
     }
 
-    h1,
+    h2,
     .info-text {
       margin: 1rem;
     }
